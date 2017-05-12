@@ -1,0 +1,1016 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A9AD07C1E17043200A1732F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9AD07B1E17043200A1732F /* AppDelegate.swift */; };
+		3A9AD07E1E17043200A1732F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9AD07D1E17043200A1732F /* ViewController.swift */; };
+		3A9AD0811E17043200A1732F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A9AD07F1E17043200A1732F /* Main.storyboard */; };
+		3A9AD0831E17043200A1732F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A9AD0821E17043200A1732F /* Assets.xcassets */; };
+		3A9AD0861E17043200A1732F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A9AD0841E17043200A1732F /* LaunchScreen.storyboard */; };
+		3A9AD0911E17043200A1732F /* PNChartSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9AD0901E17043200A1732F /* PNChartSwiftTests.swift */; };
+		3A9AD09C1E17043200A1732F /* PNChartSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9AD09B1E17043200A1732F /* PNChartSwiftUITests.swift */; };
+		3A9AD0B61E17047700A1732F /* PNBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9AD0AB1E17047700A1732F /* PNBar.swift */; };
+		3A9AD0B71E17047700A1732F /* PNBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9AD0AC1E17047700A1732F /* PNBarChart.swift */; };
+		3A9AD0B81E17047700A1732F /* PNChartLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9AD0AD1E17047700A1732F /* PNChartLabel.swift */; };
+		3A9AD0B91E17047700A1732F /* PNColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9AD0AE1E17047700A1732F /* PNColor.swift */; };
+		3A9AD0BA1E17047700A1732F /* PNGenericChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9AD0AF1E17047700A1732F /* PNGenericChart.swift */; };
+		3A9AD0BB1E17047700A1732F /* PNLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9AD0B01E17047700A1732F /* PNLineChart.swift */; };
+		3A9AD0BC1E17047700A1732F /* PNLineChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9AD0B11E17047700A1732F /* PNLineChartData.swift */; };
+		3A9AD0BD1E17047700A1732F /* PNLineChartDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9AD0B21E17047700A1732F /* PNLineChartDataItem.swift */; };
+		3A9AD0BE1E17047700A1732F /* PNPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9AD0B31E17047700A1732F /* PNPieChart.swift */; };
+		3A9AD0BF1E17047700A1732F /* PNPieChartDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9AD0B41E17047700A1732F /* PNPieChartDataItem.swift */; };
+		3A9AD0C01E17047700A1732F /* PNValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9AD0B51E17047700A1732F /* PNValue.swift */; };
+		A3B598C91EC6562C00C97794 /* ExchangeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B598C81EC6562C00C97794 /* ExchangeData.swift */; };
+		A3BD59D61EB356A700DDC1BF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BD59D41EB356A700DDC1BF /* Interface.storyboard */; };
+		A3BD59D81EB356A700DDC1BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3BD59D71EB356A700DDC1BF /* Assets.xcassets */; };
+		A3BD59DF1EB356A700DDC1BF /* PNChartWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A3BD59DE1EB356A700DDC1BF /* PNChartWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A3BD59E41EB356A700DDC1BF /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BD59E31EB356A700DDC1BF /* InterfaceController.swift */; };
+		A3BD59E61EB356A700DDC1BF /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BD59E51EB356A700DDC1BF /* ExtensionDelegate.swift */; };
+		A3BD59E81EB356A700DDC1BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3BD59E71EB356A700DDC1BF /* Assets.xcassets */; };
+		A3BD59EC1EB356A700DDC1BF /* PNChartWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A3BD59D21EB356A700DDC1BF /* PNChartWatch.app */; };
+		A3BD59F61EB381E400DDC1BF /* ChartInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BD59F51EB381E400DDC1BF /* ChartInterfaceController.swift */; };
+		A3BD5A1E1EB3E38000DDC1BF /* ChartTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BD5A1D1EB3E38000DDC1BF /* ChartTableRowController.swift */; };
+		A3BD5A371EB3F5A700DDC1BF /* NKBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BD5A231EB3F5A700DDC1BF /* NKBarChart.m */; };
+		A3BD5A381EB3F5A700DDC1BF /* NKCircleChart.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BD5A251EB3F5A700DDC1BF /* NKCircleChart.m */; };
+		A3BD5A391EB3F5A700DDC1BF /* NKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BD5A271EB3F5A700DDC1BF /* NKColor.m */; };
+		A3BD5A3A1EB3F5A700DDC1BF /* NKLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BD5A291EB3F5A700DDC1BF /* NKLineChart.m */; };
+		A3BD5A3B1EB3F5A700DDC1BF /* NKLineChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BD5A2B1EB3F5A700DDC1BF /* NKLineChartData.m */; };
+		A3BD5A3C1EB3F5A700DDC1BF /* NKLineChartDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BD5A2D1EB3F5A700DDC1BF /* NKLineChartDataItem.m */; };
+		A3BD5A3D1EB3F5A700DDC1BF /* NKPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BD5A2F1EB3F5A700DDC1BF /* NKPieChart.m */; };
+		A3BD5A3E1EB3F5A700DDC1BF /* NKPieChartDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BD5A311EB3F5A700DDC1BF /* NKPieChartDataItem.m */; };
+		A3BD5A3F1EB3F5A700DDC1BF /* NKRadarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BD5A331EB3F5A700DDC1BF /* NKRadarChart.m */; };
+		A3BD5A401EB3F5A700DDC1BF /* NKRadarChartDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BD5A351EB3F5A700DDC1BF /* NKRadarChartDataItem.m */; };
+		A3FCA79A1EBD03CB000B1BE7 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = A3FCA7991EBD03CB000B1BE7 /* Cartfile */; };
+		A3FCA7A41EBD0F6B000B1BE7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3FCA7A01EBD0CCB000B1BE7 /* Alamofire.framework */; };
+		A3FCA7A81EBD0F77000B1BE7 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3FCA79E1EBD0CBA000B1BE7 /* SwiftyJSON.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A9AD08D1E17043200A1732F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A9AD0701E17043200A1732F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A9AD0771E17043200A1732F;
+			remoteInfo = PNChartSwift;
+		};
+		3A9AD0981E17043200A1732F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A9AD0701E17043200A1732F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A9AD0771E17043200A1732F;
+			remoteInfo = PNChartSwift;
+		};
+		A3BD59E01EB356A700DDC1BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A9AD0701E17043200A1732F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3BD59DD1EB356A700DDC1BF;
+			remoteInfo = "PNChartWatch Extension";
+		};
+		A3BD59EA1EB356A700DDC1BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A9AD0701E17043200A1732F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3BD59D11EB356A700DDC1BF;
+			remoteInfo = PNChartWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A3BD59F21EB356A700DDC1BF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A3BD59DF1EB356A700DDC1BF /* PNChartWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3BD59F41EB356A700DDC1BF /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				A3BD59EC1EB356A700DDC1BF /* PNChartWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3A9AD0781E17043200A1732F /* PNChartSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PNChartSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A9AD07B1E17043200A1732F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3A9AD07D1E17043200A1732F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3A9AD0801E17043200A1732F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3A9AD0821E17043200A1732F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A9AD0851E17043200A1732F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3A9AD0871E17043200A1732F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A9AD08C1E17043200A1732F /* PNChartSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PNChartSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A9AD0901E17043200A1732F /* PNChartSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNChartSwiftTests.swift; sourceTree = "<group>"; };
+		3A9AD0921E17043200A1732F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A9AD0971E17043200A1732F /* PNChartSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PNChartSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A9AD09B1E17043200A1732F /* PNChartSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNChartSwiftUITests.swift; sourceTree = "<group>"; };
+		3A9AD09D1E17043200A1732F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../PNChartSwiftUITests/Info.plist; sourceTree = "<group>"; };
+		3A9AD0AB1E17047700A1732F /* PNBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNBar.swift; sourceTree = "<group>"; };
+		3A9AD0AC1E17047700A1732F /* PNBarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNBarChart.swift; sourceTree = "<group>"; };
+		3A9AD0AD1E17047700A1732F /* PNChartLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNChartLabel.swift; sourceTree = "<group>"; };
+		3A9AD0AE1E17047700A1732F /* PNColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNColor.swift; sourceTree = "<group>"; };
+		3A9AD0AF1E17047700A1732F /* PNGenericChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNGenericChart.swift; sourceTree = "<group>"; };
+		3A9AD0B01E17047700A1732F /* PNLineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNLineChart.swift; sourceTree = "<group>"; };
+		3A9AD0B11E17047700A1732F /* PNLineChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNLineChartData.swift; sourceTree = "<group>"; };
+		3A9AD0B21E17047700A1732F /* PNLineChartDataItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNLineChartDataItem.swift; sourceTree = "<group>"; };
+		3A9AD0B31E17047700A1732F /* PNPieChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNPieChart.swift; sourceTree = "<group>"; };
+		3A9AD0B41E17047700A1732F /* PNPieChartDataItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNPieChartDataItem.swift; sourceTree = "<group>"; };
+		3A9AD0B51E17047700A1732F /* PNValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNValue.swift; sourceTree = "<group>"; };
+		A3B598C81EC6562C00C97794 /* ExchangeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeData.swift; sourceTree = "<group>"; };
+		A3BD59D21EB356A700DDC1BF /* PNChartWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PNChartWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3BD59D51EB356A700DDC1BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		A3BD59D71EB356A700DDC1BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A3BD59D91EB356A700DDC1BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3BD59DE1EB356A700DDC1BF /* PNChartWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PNChartWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3BD59E31EB356A700DDC1BF /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		A3BD59E51EB356A700DDC1BF /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		A3BD59E71EB356A700DDC1BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A3BD59E91EB356A700DDC1BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3BD59F51EB381E400DDC1BF /* ChartInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChartInterfaceController.swift; path = "PNChartWatch Extension/ChartInterfaceController.swift"; sourceTree = SOURCE_ROOT; };
+		A3BD5A1D1EB3E38000DDC1BF /* ChartTableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartTableRowController.swift; sourceTree = "<group>"; };
+		A3BD5A211EB3F5A700DDC1BF /* PNChartWatch Extension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PNChartWatch Extension-Bridging-Header.h"; sourceTree = "<group>"; };
+		A3BD5A221EB3F5A700DDC1BF /* NKBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NKBarChart.h; path = NKWatchChart/NKBarChart.h; sourceTree = SOURCE_ROOT; };
+		A3BD5A231EB3F5A700DDC1BF /* NKBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NKBarChart.m; path = NKWatchChart/NKBarChart.m; sourceTree = SOURCE_ROOT; };
+		A3BD5A241EB3F5A700DDC1BF /* NKCircleChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NKCircleChart.h; path = NKWatchChart/NKCircleChart.h; sourceTree = SOURCE_ROOT; };
+		A3BD5A251EB3F5A700DDC1BF /* NKCircleChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NKCircleChart.m; path = NKWatchChart/NKCircleChart.m; sourceTree = SOURCE_ROOT; };
+		A3BD5A261EB3F5A700DDC1BF /* NKColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NKColor.h; path = NKWatchChart/NKColor.h; sourceTree = SOURCE_ROOT; };
+		A3BD5A271EB3F5A700DDC1BF /* NKColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NKColor.m; path = NKWatchChart/NKColor.m; sourceTree = SOURCE_ROOT; };
+		A3BD5A281EB3F5A700DDC1BF /* NKLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NKLineChart.h; path = NKWatchChart/NKLineChart.h; sourceTree = SOURCE_ROOT; };
+		A3BD5A291EB3F5A700DDC1BF /* NKLineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NKLineChart.m; path = NKWatchChart/NKLineChart.m; sourceTree = SOURCE_ROOT; };
+		A3BD5A2A1EB3F5A700DDC1BF /* NKLineChartData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NKLineChartData.h; path = NKWatchChart/NKLineChartData.h; sourceTree = SOURCE_ROOT; };
+		A3BD5A2B1EB3F5A700DDC1BF /* NKLineChartData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NKLineChartData.m; path = NKWatchChart/NKLineChartData.m; sourceTree = SOURCE_ROOT; };
+		A3BD5A2C1EB3F5A700DDC1BF /* NKLineChartDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NKLineChartDataItem.h; path = NKWatchChart/NKLineChartDataItem.h; sourceTree = SOURCE_ROOT; };
+		A3BD5A2D1EB3F5A700DDC1BF /* NKLineChartDataItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NKLineChartDataItem.m; path = NKWatchChart/NKLineChartDataItem.m; sourceTree = SOURCE_ROOT; };
+		A3BD5A2E1EB3F5A700DDC1BF /* NKPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NKPieChart.h; path = NKWatchChart/NKPieChart.h; sourceTree = SOURCE_ROOT; };
+		A3BD5A2F1EB3F5A700DDC1BF /* NKPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NKPieChart.m; path = NKWatchChart/NKPieChart.m; sourceTree = SOURCE_ROOT; };
+		A3BD5A301EB3F5A700DDC1BF /* NKPieChartDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NKPieChartDataItem.h; path = NKWatchChart/NKPieChartDataItem.h; sourceTree = SOURCE_ROOT; };
+		A3BD5A311EB3F5A700DDC1BF /* NKPieChartDataItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NKPieChartDataItem.m; path = NKWatchChart/NKPieChartDataItem.m; sourceTree = SOURCE_ROOT; };
+		A3BD5A321EB3F5A700DDC1BF /* NKRadarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NKRadarChart.h; path = NKWatchChart/NKRadarChart.h; sourceTree = SOURCE_ROOT; };
+		A3BD5A331EB3F5A700DDC1BF /* NKRadarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NKRadarChart.m; path = NKWatchChart/NKRadarChart.m; sourceTree = SOURCE_ROOT; };
+		A3BD5A341EB3F5A700DDC1BF /* NKRadarChartDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NKRadarChartDataItem.h; path = NKWatchChart/NKRadarChartDataItem.h; sourceTree = SOURCE_ROOT; };
+		A3BD5A351EB3F5A700DDC1BF /* NKRadarChartDataItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NKRadarChartDataItem.m; path = NKWatchChart/NKRadarChartDataItem.m; sourceTree = SOURCE_ROOT; };
+		A3BD5A361EB3F5A700DDC1BF /* NKWatchChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NKWatchChart.h; path = NKWatchChart/NKWatchChart.h; sourceTree = SOURCE_ROOT; };
+		A3FCA7991EBD03CB000B1BE7 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		A3FCA79E1EBD0CBA000B1BE7 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "PNChartWatch Extension/Carthage/Build/watchOS/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		A3FCA7A01EBD0CCB000B1BE7 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "PNChartWatch Extension/Carthage/Build/watchOS/Alamofire.framework"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A9AD0751E17043200A1732F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9AD0891E17043200A1732F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9AD0941E17043200A1732F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3BD59DB1EB356A700DDC1BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3FCA7A81EBD0F77000B1BE7 /* SwiftyJSON.framework in Frameworks */,
+				A3FCA7A41EBD0F6B000B1BE7 /* Alamofire.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A9AD06F1E17043200A1732F = {
+			isa = PBXGroup;
+			children = (
+				3A9AD07A1E17043200A1732F /* PNChartSwift */,
+				3A9AD08F1E17043200A1732F /* PNChartSwiftTests */,
+				3A9AD09A1E17043200A1732F /* PNChartSwiftUITests */,
+				A3BD59D31EB356A700DDC1BF /* PNChartWatch */,
+				A3BD59E21EB356A700DDC1BF /* PNChartWatch Extension */,
+				3A9AD0791E17043200A1732F /* Products */,
+				A3FCA79D1EBD0CBA000B1BE7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3A9AD0791E17043200A1732F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A9AD0781E17043200A1732F /* PNChartSwift.app */,
+				3A9AD08C1E17043200A1732F /* PNChartSwiftTests.xctest */,
+				3A9AD0971E17043200A1732F /* PNChartSwiftUITests.xctest */,
+				A3BD59D21EB356A700DDC1BF /* PNChartWatch.app */,
+				A3BD59DE1EB356A700DDC1BF /* PNChartWatch Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A9AD07A1E17043200A1732F /* PNChartSwift */ = {
+			isa = PBXGroup;
+			children = (
+				3A9AD0AA1E17045F00A1732F /* SourceCode */,
+				3A9AD07B1E17043200A1732F /* AppDelegate.swift */,
+				3A9AD07D1E17043200A1732F /* ViewController.swift */,
+				3A9AD07F1E17043200A1732F /* Main.storyboard */,
+				3A9AD0821E17043200A1732F /* Assets.xcassets */,
+				3A9AD0841E17043200A1732F /* LaunchScreen.storyboard */,
+				3A9AD0871E17043200A1732F /* Info.plist */,
+			);
+			path = PNChartSwift;
+			sourceTree = "<group>";
+		};
+		3A9AD08F1E17043200A1732F /* PNChartSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				3A9AD0901E17043200A1732F /* PNChartSwiftTests.swift */,
+				3A9AD0921E17043200A1732F /* Info.plist */,
+			);
+			path = PNChartSwiftTests;
+			sourceTree = "<group>";
+		};
+		3A9AD09A1E17043200A1732F /* PNChartSwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3A9AD09B1E17043200A1732F /* PNChartSwiftUITests.swift */,
+			);
+			path = PNChartSwiftUITests;
+			sourceTree = "<group>";
+		};
+		3A9AD0AA1E17045F00A1732F /* SourceCode */ = {
+			isa = PBXGroup;
+			children = (
+				3A9AD0AB1E17047700A1732F /* PNBar.swift */,
+				3A9AD0AC1E17047700A1732F /* PNBarChart.swift */,
+				3A9AD0AD1E17047700A1732F /* PNChartLabel.swift */,
+				3A9AD0AE1E17047700A1732F /* PNColor.swift */,
+				3A9AD0AF1E17047700A1732F /* PNGenericChart.swift */,
+				3A9AD0B01E17047700A1732F /* PNLineChart.swift */,
+				3A9AD0B11E17047700A1732F /* PNLineChartData.swift */,
+				3A9AD0B21E17047700A1732F /* PNLineChartDataItem.swift */,
+				3A9AD0B31E17047700A1732F /* PNPieChart.swift */,
+				3A9AD0B41E17047700A1732F /* PNPieChartDataItem.swift */,
+				3A9AD0B51E17047700A1732F /* PNValue.swift */,
+			);
+			name = SourceCode;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		A3BD59D31EB356A700DDC1BF /* PNChartWatch */ = {
+			isa = PBXGroup;
+			children = (
+				A3BD59D41EB356A700DDC1BF /* Interface.storyboard */,
+				A3BD59D71EB356A700DDC1BF /* Assets.xcassets */,
+				A3BD59D91EB356A700DDC1BF /* Info.plist */,
+			);
+			path = PNChartWatch;
+			sourceTree = "<group>";
+		};
+		A3BD59E21EB356A700DDC1BF /* PNChartWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3A9AD09D1E17043200A1732F /* Info.plist */,
+				A3BD5A411EB3F5C900DDC1BF /* ChartObjectC */,
+				A3BD59F51EB381E400DDC1BF /* ChartInterfaceController.swift */,
+				A3BD5A1D1EB3E38000DDC1BF /* ChartTableRowController.swift */,
+				A3BD59E31EB356A700DDC1BF /* InterfaceController.swift */,
+				A3BD59E51EB356A700DDC1BF /* ExtensionDelegate.swift */,
+				A3BD59E71EB356A700DDC1BF /* Assets.xcassets */,
+				A3BD59E91EB356A700DDC1BF /* Info.plist */,
+				A3BD5A211EB3F5A700DDC1BF /* PNChartWatch Extension-Bridging-Header.h */,
+				A3FCA7991EBD03CB000B1BE7 /* Cartfile */,
+				A3B598C81EC6562C00C97794 /* ExchangeData.swift */,
+			);
+			path = "PNChartWatch Extension";
+			sourceTree = "<group>";
+		};
+		A3BD5A411EB3F5C900DDC1BF /* ChartObjectC */ = {
+			isa = PBXGroup;
+			children = (
+				A3BD5A221EB3F5A700DDC1BF /* NKBarChart.h */,
+				A3BD5A231EB3F5A700DDC1BF /* NKBarChart.m */,
+				A3BD5A241EB3F5A700DDC1BF /* NKCircleChart.h */,
+				A3BD5A251EB3F5A700DDC1BF /* NKCircleChart.m */,
+				A3BD5A261EB3F5A700DDC1BF /* NKColor.h */,
+				A3BD5A271EB3F5A700DDC1BF /* NKColor.m */,
+				A3BD5A281EB3F5A700DDC1BF /* NKLineChart.h */,
+				A3BD5A291EB3F5A700DDC1BF /* NKLineChart.m */,
+				A3BD5A2A1EB3F5A700DDC1BF /* NKLineChartData.h */,
+				A3BD5A2B1EB3F5A700DDC1BF /* NKLineChartData.m */,
+				A3BD5A2C1EB3F5A700DDC1BF /* NKLineChartDataItem.h */,
+				A3BD5A2D1EB3F5A700DDC1BF /* NKLineChartDataItem.m */,
+				A3BD5A2E1EB3F5A700DDC1BF /* NKPieChart.h */,
+				A3BD5A2F1EB3F5A700DDC1BF /* NKPieChart.m */,
+				A3BD5A301EB3F5A700DDC1BF /* NKPieChartDataItem.h */,
+				A3BD5A311EB3F5A700DDC1BF /* NKPieChartDataItem.m */,
+				A3BD5A321EB3F5A700DDC1BF /* NKRadarChart.h */,
+				A3BD5A331EB3F5A700DDC1BF /* NKRadarChart.m */,
+				A3BD5A341EB3F5A700DDC1BF /* NKRadarChartDataItem.h */,
+				A3BD5A351EB3F5A700DDC1BF /* NKRadarChartDataItem.m */,
+				A3BD5A361EB3F5A700DDC1BF /* NKWatchChart.h */,
+			);
+			name = ChartObjectC;
+			sourceTree = "<group>";
+		};
+		A3FCA79D1EBD0CBA000B1BE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3FCA7A01EBD0CCB000B1BE7 /* Alamofire.framework */,
+				A3FCA79E1EBD0CBA000B1BE7 /* SwiftyJSON.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A9AD0771E17043200A1732F /* PNChartSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A9AD0A01E17043200A1732F /* Build configuration list for PBXNativeTarget "PNChartSwift" */;
+			buildPhases = (
+				3A9AD0741E17043200A1732F /* Sources */,
+				3A9AD0751E17043200A1732F /* Frameworks */,
+				3A9AD0761E17043200A1732F /* Resources */,
+				A3BD59F41EB356A700DDC1BF /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A3BD59EB1EB356A700DDC1BF /* PBXTargetDependency */,
+			);
+			name = PNChartSwift;
+			productName = PNChartSwift;
+			productReference = 3A9AD0781E17043200A1732F /* PNChartSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3A9AD08B1E17043200A1732F /* PNChartSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A9AD0A31E17043200A1732F /* Build configuration list for PBXNativeTarget "PNChartSwiftTests" */;
+			buildPhases = (
+				3A9AD0881E17043200A1732F /* Sources */,
+				3A9AD0891E17043200A1732F /* Frameworks */,
+				3A9AD08A1E17043200A1732F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A9AD08E1E17043200A1732F /* PBXTargetDependency */,
+			);
+			name = PNChartSwiftTests;
+			productName = PNChartSwiftTests;
+			productReference = 3A9AD08C1E17043200A1732F /* PNChartSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3A9AD0961E17043200A1732F /* PNChartSwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A9AD0A61E17043200A1732F /* Build configuration list for PBXNativeTarget "PNChartSwiftUITests" */;
+			buildPhases = (
+				3A9AD0931E17043200A1732F /* Sources */,
+				3A9AD0941E17043200A1732F /* Frameworks */,
+				3A9AD0951E17043200A1732F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A9AD0991E17043200A1732F /* PBXTargetDependency */,
+			);
+			name = PNChartSwiftUITests;
+			productName = PNChartSwiftUITests;
+			productReference = 3A9AD0971E17043200A1732F /* PNChartSwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		A3BD59D11EB356A700DDC1BF /* PNChartWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3BD59F31EB356A700DDC1BF /* Build configuration list for PBXNativeTarget "PNChartWatch" */;
+			buildPhases = (
+				A3BD59D01EB356A700DDC1BF /* Resources */,
+				A3BD59F21EB356A700DDC1BF /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A3BD59E11EB356A700DDC1BF /* PBXTargetDependency */,
+			);
+			name = PNChartWatch;
+			productName = PNChartWatch;
+			productReference = A3BD59D21EB356A700DDC1BF /* PNChartWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		A3BD59DD1EB356A700DDC1BF /* PNChartWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3BD59F11EB356A700DDC1BF /* Build configuration list for PBXNativeTarget "PNChartWatch Extension" */;
+			buildPhases = (
+				A3BD59DA1EB356A700DDC1BF /* Sources */,
+				A3BD59DB1EB356A700DDC1BF /* Frameworks */,
+				A3BD59DC1EB356A700DDC1BF /* Resources */,
+				A3FCA79C1EBD0B1A000B1BE7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PNChartWatch Extension";
+			productName = "PNChartWatch Extension";
+			productReference = A3BD59DE1EB356A700DDC1BF /* PNChartWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A9AD0701E17043200A1732F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0820;
+				TargetAttributes = {
+					3A9AD0771E17043200A1732F = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					3A9AD08B1E17043200A1732F = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3A9AD0771E17043200A1732F;
+					};
+					3A9AD0961E17043200A1732F = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3A9AD0771E17043200A1732F;
+					};
+					A3BD59D11EB356A700DDC1BF = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+					A3BD59DD1EB356A700DDC1BF = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = JYKC96M9FK;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3A9AD0731E17043200A1732F /* Build configuration list for PBXProject "PNChartSwift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3A9AD06F1E17043200A1732F;
+			productRefGroup = 3A9AD0791E17043200A1732F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A9AD0771E17043200A1732F /* PNChartSwift */,
+				3A9AD08B1E17043200A1732F /* PNChartSwiftTests */,
+				3A9AD0961E17043200A1732F /* PNChartSwiftUITests */,
+				A3BD59D11EB356A700DDC1BF /* PNChartWatch */,
+				A3BD59DD1EB356A700DDC1BF /* PNChartWatch Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A9AD0761E17043200A1732F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9AD0861E17043200A1732F /* LaunchScreen.storyboard in Resources */,
+				3A9AD0831E17043200A1732F /* Assets.xcassets in Resources */,
+				3A9AD0811E17043200A1732F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9AD08A1E17043200A1732F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9AD0951E17043200A1732F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3BD59D01EB356A700DDC1BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3BD59D81EB356A700DDC1BF /* Assets.xcassets in Resources */,
+				A3BD59D61EB356A700DDC1BF /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3BD59DC1EB356A700DDC1BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3FCA79A1EBD03CB000B1BE7 /* Cartfile in Resources */,
+				A3BD59E81EB356A700DDC1BF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A3FCA79C1EBD0B1A000B1BE7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/PNChartWatch Extension/Carthage/Build/watchOS/SwiftyJSON.framework",
+				"$(SRCROOT)/PNChartWatch Extension/Carthage/Build/watchOS/Alamofire.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A9AD0741E17043200A1732F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9AD0B71E17047700A1732F /* PNBarChart.swift in Sources */,
+				3A9AD0B61E17047700A1732F /* PNBar.swift in Sources */,
+				3A9AD0BF1E17047700A1732F /* PNPieChartDataItem.swift in Sources */,
+				3A9AD0BE1E17047700A1732F /* PNPieChart.swift in Sources */,
+				3A9AD0BA1E17047700A1732F /* PNGenericChart.swift in Sources */,
+				3A9AD0BD1E17047700A1732F /* PNLineChartDataItem.swift in Sources */,
+				3A9AD0B81E17047700A1732F /* PNChartLabel.swift in Sources */,
+				3A9AD0BB1E17047700A1732F /* PNLineChart.swift in Sources */,
+				3A9AD07E1E17043200A1732F /* ViewController.swift in Sources */,
+				3A9AD07C1E17043200A1732F /* AppDelegate.swift in Sources */,
+				3A9AD0C01E17047700A1732F /* PNValue.swift in Sources */,
+				3A9AD0B91E17047700A1732F /* PNColor.swift in Sources */,
+				3A9AD0BC1E17047700A1732F /* PNLineChartData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9AD0881E17043200A1732F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9AD0911E17043200A1732F /* PNChartSwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A9AD0931E17043200A1732F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9AD09C1E17043200A1732F /* PNChartSwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3BD59DA1EB356A700DDC1BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3BD59F61EB381E400DDC1BF /* ChartInterfaceController.swift in Sources */,
+				A3BD5A391EB3F5A700DDC1BF /* NKColor.m in Sources */,
+				A3BD5A3C1EB3F5A700DDC1BF /* NKLineChartDataItem.m in Sources */,
+				A3BD59E61EB356A700DDC1BF /* ExtensionDelegate.swift in Sources */,
+				A3BD5A3B1EB3F5A700DDC1BF /* NKLineChartData.m in Sources */,
+				A3BD5A3D1EB3F5A700DDC1BF /* NKPieChart.m in Sources */,
+				A3BD5A3A1EB3F5A700DDC1BF /* NKLineChart.m in Sources */,
+				A3BD5A1E1EB3E38000DDC1BF /* ChartTableRowController.swift in Sources */,
+				A3BD59E41EB356A700DDC1BF /* InterfaceController.swift in Sources */,
+				A3BD5A3E1EB3F5A700DDC1BF /* NKPieChartDataItem.m in Sources */,
+				A3BD5A371EB3F5A700DDC1BF /* NKBarChart.m in Sources */,
+				A3BD5A381EB3F5A700DDC1BF /* NKCircleChart.m in Sources */,
+				A3BD5A3F1EB3F5A700DDC1BF /* NKRadarChart.m in Sources */,
+				A3BD5A401EB3F5A700DDC1BF /* NKRadarChartDataItem.m in Sources */,
+				A3B598C91EC6562C00C97794 /* ExchangeData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A9AD08E1E17043200A1732F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A9AD0771E17043200A1732F /* PNChartSwift */;
+			targetProxy = 3A9AD08D1E17043200A1732F /* PBXContainerItemProxy */;
+		};
+		3A9AD0991E17043200A1732F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A9AD0771E17043200A1732F /* PNChartSwift */;
+			targetProxy = 3A9AD0981E17043200A1732F /* PBXContainerItemProxy */;
+		};
+		A3BD59E11EB356A700DDC1BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A3BD59DD1EB356A700DDC1BF /* PNChartWatch Extension */;
+			targetProxy = A3BD59E01EB356A700DDC1BF /* PBXContainerItemProxy */;
+		};
+		A3BD59EB1EB356A700DDC1BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A3BD59D11EB356A700DDC1BF /* PNChartWatch */;
+			targetProxy = A3BD59EA1EB356A700DDC1BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3A9AD07F1E17043200A1732F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A9AD0801E17043200A1732F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3A9AD0841E17043200A1732F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A9AD0851E17043200A1732F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A3BD59D41EB356A700DDC1BF /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3BD59D51EB356A700DDC1BF /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3A9AD09E1E17043200A1732F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3A9AD09F1E17043200A1732F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A9AD0A11E17043200A1732F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PNChartWatch\\ Extension/Carthage/Build/watchOS",
+					"$(PROJECT_DIR)/PNChartWatch\\ Extension/Carthage/Build/watchOS",
+				);
+				INFOPLIST_FILE = PNChartSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Demo.PNChartSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				"SWIFT_OBJC_INTERFACE_HEADER_NAME[arch=*]" = "$(SWIFT_MODULE_NAME)-Swift.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3A9AD0A21E17043200A1732F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PNChartWatch\\ Extension/Carthage/Build/watchOS",
+					"$(PROJECT_DIR)/PNChartWatch\\ Extension/Carthage/Build/watchOS",
+				);
+				INFOPLIST_FILE = PNChartSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Demo.PNChartSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		3A9AD0A41E17043200A1732F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PNChartWatch\\ Extension/Carthage/Build/watchOS",
+				);
+				INFOPLIST_FILE = PNChartSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Demo.PNChartSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PNChartSwift.app/PNChartSwift";
+			};
+			name = Debug;
+		};
+		3A9AD0A51E17043200A1732F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PNChartWatch\\ Extension/Carthage/Build/watchOS",
+				);
+				INFOPLIST_FILE = PNChartSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Demo.PNChartSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PNChartSwift.app/PNChartSwift";
+			};
+			name = Release;
+		};
+		3A9AD0A71E17043200A1732F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PNChartWatch\\ Extension/Carthage/Build/watchOS",
+				);
+				INFOPLIST_FILE = PNChartSwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Demo.PNChartSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = PNChartSwift;
+			};
+			name = Debug;
+		};
+		3A9AD0A81E17043200A1732F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PNChartWatch\\ Extension/Carthage/Build/watchOS",
+				);
+				INFOPLIST_FILE = PNChartSwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Demo.PNChartSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = PNChartSwift;
+			};
+			name = Release;
+		};
+		A3BD59ED1EB356A700DDC1BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				IBSC_MODULE = PNChartWatch_Extension;
+				INFOPLIST_FILE = PNChartWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = Demo.PNChartSwift.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		A3BD59EE1EB356A700DDC1BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				IBSC_MODULE = PNChartWatch_Extension;
+				INFOPLIST_FILE = PNChartWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = Demo.PNChartSwift.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
+		A3BD59EF1EB356A700DDC1BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = JYKC96M9FK;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PNChartWatch\\ Extension/Carthage/Build/watchOS",
+				);
+				INFOPLIST_FILE = "PNChartWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Demo.PNChartSwift.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "PNChartWatch Extension/PNChartWatch Extension-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		A3BD59F01EB356A700DDC1BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = JYKC96M9FK;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PNChartWatch\\ Extension/Carthage/Build/watchOS",
+				);
+				INFOPLIST_FILE = "PNChartWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Demo.PNChartSwift.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "PNChartWatch Extension/PNChartWatch Extension-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A9AD0731E17043200A1732F /* Build configuration list for PBXProject "PNChartSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A9AD09E1E17043200A1732F /* Debug */,
+				3A9AD09F1E17043200A1732F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A9AD0A01E17043200A1732F /* Build configuration list for PBXNativeTarget "PNChartSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A9AD0A11E17043200A1732F /* Debug */,
+				3A9AD0A21E17043200A1732F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A9AD0A31E17043200A1732F /* Build configuration list for PBXNativeTarget "PNChartSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A9AD0A41E17043200A1732F /* Debug */,
+				3A9AD0A51E17043200A1732F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A9AD0A61E17043200A1732F /* Build configuration list for PBXNativeTarget "PNChartSwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A9AD0A71E17043200A1732F /* Debug */,
+				3A9AD0A81E17043200A1732F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3BD59F11EB356A700DDC1BF /* Build configuration list for PBXNativeTarget "PNChartWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3BD59EF1EB356A700DDC1BF /* Debug */,
+				A3BD59F01EB356A700DDC1BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3BD59F31EB356A700DDC1BF /* Build configuration list for PBXNativeTarget "PNChartWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3BD59ED1EB356A700DDC1BF /* Debug */,
+				A3BD59EE1EB356A700DDC1BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A9AD0701E17043200A1732F /* Project object */;
+}
