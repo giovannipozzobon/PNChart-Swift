@@ -14,8 +14,13 @@ class ChartInterfaceController: WKInterfaceController {
     
     @IBOutlet var chartImage: WKInterfaceImage!
     
+    @IBOutlet var labelInfoOrder: WKInterfaceLabel!
+    
     var chartType : String = ""
     var arrayValori = [[String:AnyObject]]()
+    var arrayOrderTop = [[String:AnyObject]]()
+    var arrayUserTop = [[String:AnyObject]]()
+    
     var ColorArray : [UIColor] = []
 
     //Colori definiti con edefine in Object-C ma che non vengono visti da Swift
@@ -37,7 +42,9 @@ class ChartInterfaceController: WKInterfaceController {
         //self.chartType = context as! String;
        
         self.chartType = (context as! ExchageData).chartType
-        self.arrayValori = (context as! ExchageData).arrRes
+        self.arrayValori = (context as! ExchageData).arrGraphRes
+        self.arrayOrderTop = (context as! ExchageData).arrTopOrderRes
+        self.arrayUserTop = (context as! ExchageData).arrTopUserRes
         
         print(self.chartType)
         
@@ -268,14 +275,56 @@ class ChartInterfaceController: WKInterfaceController {
             
             image = chart.drawImage()
             
-        } else
+        } else if (self.chartType == "TopOrder") {
+            
+            var testo : String = ""
+            
+            for (_, dict) in self.arrayOrderTop.enumerated() {
+                
+                let number  = dict["Order"] as? String
+              
+                let amount = dict["Amount"] as? String
+                
+                let user = dict["User"] as? String
+                
+                let contact = dict["Contact"] as? String
+ 
+                testo = testo + number! + amount! + user! + contact!
+            
+            }
+            print ("TopOrder \(testo)")
+            self.labelInfoOrder.setText(testo)
+            image = UIImage()
+            
+        
+        } else if (self.chartType == "TopUser") {
+    
+            var testo : String = ""
+    
+            for (_, dict) in self.arrayUserTop.enumerated() {
+    
+            let amount = dict["Amount"] as? String
+    
+            let user = dict["User"] as? String
+    
+            testo = testo + user! + amount! + user!
+    
+        }
+        print ("TopUser \(testo)")
+        self.labelInfoOrder.setText(testo)
+        image = UIImage()
+        
+    
+    }
+    
+        else
         {
             print("don't support now.")
             image = UIImage()
         }
-        
+    
         self.chartImage.setImage(image)
-        
+    
     }
 
     override func didDeactivate() {

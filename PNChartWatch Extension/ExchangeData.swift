@@ -13,7 +13,11 @@ class ExchageData : NSObject {
 
     var chartType : String = ""
     
-    var arrRes = [[String:AnyObject]]() //Array dei valori ritornati
+    var arrGraphRes = [[String:AnyObject]]() //Array dei valori ritornati
+
+    var arrTopOrderRes = [[String:AnyObject]]() //Array dei valori ritornati
+    
+    var arrTopUserRes = [[String:AnyObject]]() //Array dei valori ritornati
 
 
  }

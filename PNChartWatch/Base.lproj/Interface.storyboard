@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
     </dependencies>
     <scenes>
@@ -41,10 +41,12 @@
             <objects>
                 <controller hidesWhenLoading="NO" id="kRr-tZ-Owy" customClass="ChartInterfaceController" customModule="PNChartWatch_Extension">
                     <items>
+                        <label width="1" widthAdjustment="2" height="100" alignment="center" verticalAlignment="center" accessibilityLabel="InfoOrder" accessibilityValue="Informazioni sull'ordine" text="Informazioni ordini" textAlignment="center" baselineAdjustment="alignCenters" numberOfLines="4" id="iCI-Sp-AXe" userLabel="testo"/>
                         <imageView width="1" height="1" alignment="left" id="9pa-SO-Rhx"/>
                     </items>
                     <connections>
                         <outlet property="chartImage" destination="9pa-SO-Rhx" id="O5x-O7-tOv"/>
+                        <outlet property="labelInfoOrder" destination="iCI-Sp-AXe" id="Zuu-fx-OR5"/>
                     </connections>
                 </controller>
             </objects>
