@@ -18,6 +18,12 @@ class ExchageData : NSObject {
     var arrTopOrderRes = [[String:AnyObject]]() //Array dei valori ritornati
     
     var arrTopUserRes = [[String:AnyObject]]() //Array dei valori ritornati
+    
+    //Indicatore di caricamento dei dati JSon
+    var graphLoaded : Bool = false;
+    var topOrderLoaded : Bool = false;
+    var topUserLoaded : Bool = false;
+
 
 
  }

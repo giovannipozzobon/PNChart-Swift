@@ -19,6 +19,12 @@ class InterfaceController: WKInterfaceController {
     
     @IBOutlet var chartTable: WKInterfaceTable!
     
+    //Indicatori di caricamento dei dati
+    var graphLoaded : Bool = false;
+    var topOrderLoaded : Bool = false;
+    var topUserLoaded : Bool = false;
+
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -28,11 +34,6 @@ class InterfaceController: WKInterfaceController {
     override func willActivate()  {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        
-        var graphLoaded : Bool = false;
-        var topOrderLoaded : Bool = false;
-        var topUserLoaded : Bool = false;
-
         
         let querypointGraph : String = String("http://88.36.205.44:61862/QueryPoint/term.getOrdersAmount?qry=")
 
@@ -48,7 +49,7 @@ class InterfaceController: WKInterfaceController {
         print(querypointTopOrder)
         
         let parametersTopOrder: Parameters = [
-            "Date": "20170712"
+            "Date": "20170504"
         ]
  
         let querypointTopUser : String = String("http://88.36.205.44:61862/QueryPoint/term.getTopUser?qry=")
@@ -56,8 +57,8 @@ class InterfaceController: WKInterfaceController {
         print(querypointTopUser)
         
         let parametersTopUser: Parameters = [
-            "startDate": "20170712",
-            "endDate": "20170801"
+            "startDate": "20100501",
+            "endDate": "20180505"
         ]
         
         
@@ -84,7 +85,7 @@ class InterfaceController: WKInterfaceController {
                         print("datiScambiati.arrGraphRes: \(self.datiScambiati.arrGraphRes)")
                     }
                     
-                    graphLoaded = true
+                    self.graphLoaded = true
 
                 }
                     
@@ -103,7 +104,7 @@ class InterfaceController: WKInterfaceController {
                         print("datiScambiati.arrTopOrderRes: \(self.datiScambiati.arrTopOrderRes)")
                     }
                     
-                    topOrderLoaded = true
+                    self.topOrderLoaded = true
                     
                 }
                 
@@ -123,7 +124,7 @@ class InterfaceController: WKInterfaceController {
                         print("datiScambiati.arrTopUserRes: \(self.datiScambiati.arrTopUserRes)")
                     }
                     
-                    topUserLoaded = true
+                    self.topUserLoaded = true
                     
                 }
                 
@@ -132,7 +133,7 @@ class InterfaceController: WKInterfaceController {
         //Carica la tabella con i vai tipi di grafico
         /* TODO: da differenziare quando i dati dei grafici, toporder e topusseer vengono caricati o meno*/
         
-        self.chartTypes = ["Line Chart", "Bar Chart", "Pie Chart", "Circle Chart", "Radar Chart", "TopOrder", "TopUser"]
+        self.chartTypes = ["Line Chart", "Bar Chart", "Pie Chart", "Circle Chart", "Radar Chart", "Top Order", "Top User", "Dett Order"]
         
         self.chartTable.setNumberOfRows(self.chartTypes.count, withRowType: "ChartTableRowController")
         
@@ -156,7 +157,12 @@ class InterfaceController: WKInterfaceController {
 
             //return self.chartTypes[rowIndex]
         
-            datiScambiati.chartType = self.chartTypes[rowIndex]
+            datiScambiati.chartType         = self.chartTypes[rowIndex]
+            datiScambiati.graphLoaded       = self.graphLoaded;
+            datiScambiati.topOrderLoaded    = self.topOrderLoaded;
+            datiScambiati.topUserLoaded     = self.topUserLoaded;
+
+        
             return self.datiScambiati
     }
 

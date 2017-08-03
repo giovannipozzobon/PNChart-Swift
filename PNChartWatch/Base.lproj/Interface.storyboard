@@ -41,16 +41,21 @@
             <objects>
                 <controller hidesWhenLoading="NO" id="kRr-tZ-Owy" customClass="ChartInterfaceController" customModule="PNChartWatch_Extension">
                     <items>
-                        <label width="1" widthAdjustment="2" height="100" alignment="center" verticalAlignment="center" accessibilityLabel="InfoOrder" accessibilityValue="Informazioni sull'ordine" text="Informazioni ordini" textAlignment="center" baselineAdjustment="alignCenters" numberOfLines="4" id="iCI-Sp-AXe" userLabel="testo"/>
-                        <imageView width="1" height="1" alignment="left" id="9pa-SO-Rhx"/>
+                        <group width="136" height="153" alignment="left" id="iQ7-2N-UHA">
+                            <items>
+                                <label width="0.0" alignment="center" verticalAlignment="center" accessibilityLabel="InfoOrder" accessibilityValue="Informazioni sull'ordine" text="Informazioni ordini" textAlignment="left" numberOfLines="16" id="iCI-Sp-AXe" userLabel="testo">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
+                            </items>
+                        </group>
                     </items>
                     <connections>
-                        <outlet property="chartImage" destination="9pa-SO-Rhx" id="O5x-O7-tOv"/>
+                        <outlet property="chartImage" destination="iQ7-2N-UHA" id="kxv-aD-j75"/>
                         <outlet property="labelInfoOrder" destination="iCI-Sp-AXe" id="Zuu-fx-OR5"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="412" y="-28"/>
+            <point key="canvasLocation" x="412" y="25"/>
         </scene>
     </scenes>
 </document>

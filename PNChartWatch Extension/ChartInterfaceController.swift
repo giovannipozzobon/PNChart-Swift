@@ -12,14 +12,18 @@ import Foundation
 
 class ChartInterfaceController: WKInterfaceController {
     
-    @IBOutlet var chartImage: WKInterfaceImage!
+    @IBOutlet var chartImage: WKInterfaceGroup!
     
     @IBOutlet var labelInfoOrder: WKInterfaceLabel!
     
     var chartType : String = ""
-    var arrayValori = [[String:AnyObject]]()
+    var arrayGraphRes = [[String:AnyObject]]()
     var arrayOrderTop = [[String:AnyObject]]()
     var arrayUserTop = [[String:AnyObject]]()
+    
+    var graphLoaded : Bool = false
+    var topOrderLoaded : Bool = false
+    var topUserLoaded : Bool = false
     
     var ColorArray : [UIColor] = []
 
@@ -35,6 +39,18 @@ class ChartInterfaceController: WKInterfaceController {
     let shadowColor = UIColor(colorLiteralRed:225.0 / 255.0, green:225.0 / 255.0, blue:225.0 / 255.0, alpha:0.5)
     
     
+    func convertiData (dateString : String) -> String {
+        var truncated : String = ""
+        
+        if (dateString.characters.count>6){
+            let endIndex = dateString.index(dateString.startIndex, offsetBy: 6)
+            truncated = dateString.substring(from: endIndex)
+        }
+        print(truncated)
+        return truncated
+    }
+    
+     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -42,9 +58,13 @@ class ChartInterfaceController: WKInterfaceController {
         //self.chartType = context as! String;
        
         self.chartType = (context as! ExchageData).chartType
-        self.arrayValori = (context as! ExchageData).arrGraphRes
+        self.arrayGraphRes = (context as! ExchageData).arrGraphRes
         self.arrayOrderTop = (context as! ExchageData).arrTopOrderRes
         self.arrayUserTop = (context as! ExchageData).arrTopUserRes
+        
+        self.graphLoaded = (context as! ExchageData).graphLoaded;
+        self.topOrderLoaded = (context as! ExchageData).topOrderLoaded;
+        self.topUserLoaded = (context as! ExchageData).topUserLoaded;
         
         print(self.chartType)
         
@@ -59,8 +79,11 @@ class ChartInterfaceController: WKInterfaceController {
 
         let image : UIImage
         let frame : CGRect = CGRect(x: 0.0, y: 0.0, width: self.contentFrame.size.width, height: self.contentFrame.size.height)
+        var isThereTesto : Bool = false
+        var testo : String = ""
         
-        if (self.chartType == "Line Chart")
+        
+        if (self.chartType == "Line Chart" && self.graphLoaded)
         {
             let chart : NKLineChart = NKLineChart(frame: frame)
             chart.yLabelFormat = "%1.1f"
@@ -104,7 +127,7 @@ class ChartInterfaceController: WKInterfaceController {
             chart.xLabels = []
             chart.yLabels = []
             
-            for (_, dict) in self.arrayValori.enumerated() {
+            for (_, dict) in self.arrayGraphRes.enumerated() {
                 
                 let number  = dict["amount"] as? String
               //  let n = CGFloat(NumberFormatter().number(from: number)!)
@@ -113,7 +136,8 @@ class ChartInterfaceController: WKInterfaceController {
                 chart.yLabels.append(number ??  "")
                 
                 let dateString = dict["date"] as? String
-                chart.xLabels.append(dateString ??  "")
+                chart.xLabels.append(convertiData(dateString: dateString!))
+
 
             }
 
@@ -150,8 +174,8 @@ class ChartInterfaceController: WKInterfaceController {
             image = chart.drawImage()
             
             
-          }  else if (self.chartType == "Bar Chart")
-        {
+          }  else if (self.chartType == "Bar Chart" && self.graphLoaded)
+            {
             let chart : NKBarChart = NKBarChart (frame: frame)
             
             chart.yLabelFormatter = { (yValue : CGFloat) -> String in
@@ -176,7 +200,7 @@ class ChartInterfaceController: WKInterfaceController {
             chart.yValues = []
             chart.strokeColors = []
             
-            for (index, dict) in self.arrayValori.enumerated() {
+            for (index, dict) in self.arrayGraphRes.enumerated() {
                 
                 let number  = dict["amount"] as? String
                 //  let n = CGFloat(NumberFormatter().number(from: number)!)
@@ -184,7 +208,7 @@ class ChartInterfaceController: WKInterfaceController {
                 
                 let dateString = dict["date"] as? String
                 
-                chart.xLabels.append(dateString!)
+                chart.xLabels.append(convertiData(dateString: dateString!))
                 chart.yValues.append(n)
                 
                 chart.strokeColors.append(self.ColorArray[index%6])
@@ -195,9 +219,9 @@ class ChartInterfaceController: WKInterfaceController {
             
             image = chart.drawImage()
     
-    } else if (self.chartType == "Pie Chart")
+            } else if (self.chartType == "Pie Chart" && self.graphLoaded)
    
-        {
+            {
             /*
             let items : [NKPieChartDataItem] = [
             NKPieChartDataItem(value: 10, color: NKLightGreen),
@@ -208,7 +232,7 @@ class ChartInterfaceController: WKInterfaceController {
 
             var items : [NKPieChartDataItem] = []
             
-            for (index, dict) in self.arrayValori.enumerated() {
+            for (index, dict) in self.arrayGraphRes.enumerated() {
                 
                 let number  = dict["amount"] as? String
                 //  let n = CGFloat(NumberFormatter().number(from: number)!)
@@ -216,7 +240,7 @@ class ChartInterfaceController: WKInterfaceController {
                 
                 let dateString = dict["date"] as? String
                 
-                let item : NKPieChartDataItem = NKPieChartDataItem(value: n, color: self.ColorArray[index%6], description: dateString)
+                let item : NKPieChartDataItem = NKPieChartDataItem(value: n, color: self.ColorArray[index%6], description: convertiData(dateString: dateString!))
                 items.append(item)
                 
                 
@@ -232,8 +256,8 @@ class ChartInterfaceController: WKInterfaceController {
             
             image = chart.drawImage()
             
-        } else if (self.chartType == "Circle Chart")
-        {
+            } else if (self.chartType == "Circle Chart" && self.graphLoaded)
+            {
             
            
             let chart : NKCircleChart = NKCircleChart (frame:frame, total:100, current:60, clockwise:true, shadow:true, shadowColor:shadowColor, displayCountingLabel:true, overrideLineWidth:5)
@@ -243,8 +267,8 @@ class ChartInterfaceController: WKInterfaceController {
             
             image = chart.drawImage()
             
-        } else if (self.chartType == "Radar Chart")
-        {
+            } else if (self.chartType == "Radar Chart" && self.graphLoaded)
+            {
           /*  let items : [NKRadarChartDataItem] = [
             NKRadarChartDataItem(value:3, description:"Art"),
             NKRadarChartDataItem(value:2, description:"Math"),
@@ -257,7 +281,7 @@ class ChartInterfaceController: WKInterfaceController {
             
             var items : [NKRadarChartDataItem] = []
             
-            for (_, dict) in self.arrayValori.enumerated() {
+            for (_, dict) in self.arrayGraphRes.enumerated() {
                 
                 let number  = dict["amount"] as? String
                 //  let n = CGFloat(NumberFormatter().number(from: number)!)
@@ -265,7 +289,7 @@ class ChartInterfaceController: WKInterfaceController {
                 
                 let dateString = dict["date"] as? String
                 
-                let item : NKRadarChartDataItem = NKRadarChartDataItem(value: n, description: dateString)
+                let item : NKRadarChartDataItem = NKRadarChartDataItem(value: n, description: convertiData(dateString: dateString!))
                 items.append(item)
                 
                 
@@ -275,55 +299,84 @@ class ChartInterfaceController: WKInterfaceController {
             
             image = chart.drawImage()
             
-        } else if (self.chartType == "TopOrder") {
+            } else if (self.chartType == "Top Order" && self.topOrderLoaded)
+            {
             
-            var testo : String = ""
-            
+            testo = "Top Ordini:\n\n"
+
             for (_, dict) in self.arrayOrderTop.enumerated() {
                 
-                let number  = dict["Order"] as? String
+                //let number  = dict["Order"] as? String
               
                 let amount = dict["Amount"] as? String
                 
-                let user = dict["User"] as? String
+                //let user = dict["User"] as? String
                 
                 let contact = dict["Contact"] as? String
  
-                testo = testo + number! + amount! + user! + contact!
+                testo = testo + contact! + "\n"+amount! + " Euro\n\n"
+
             
             }
             print ("TopOrder \(testo)")
             self.labelInfoOrder.setText(testo)
             image = UIImage()
+            isThereTesto = true
             
         
-        } else if (self.chartType == "TopUser") {
+            } else if (self.chartType == "Top User" && self.topUserLoaded)
+            {
     
-            var testo : String = ""
-    
-            for (_, dict) in self.arrayUserTop.enumerated() {
-    
-            let amount = dict["Amount"] as? String
-    
-            let user = dict["User"] as? String
-    
-            testo = testo + user! + amount! + user!
-    
+            testo = "Top Agenti:\n\n"
+                for (_, dict) in self.arrayUserTop.enumerated() {
+
+                let amount = dict["Amount"] as? String
+
+                let user = dict["User"] as? String
+
+                testo = testo + user! + "\n" + amount! + " Euro\n\n"
+                    
+                }
+            
+            print ("TopUser \(testo)")
+            self.labelInfoOrder.setText(testo)
+            image = UIImage()
+            isThereTesto = true
+
+        } else if (self.chartType == "Dett Order" && self.graphLoaded)
+        {
+
+            testo = "Dettaglio Ordini:\n\n"
+            for (_, dict) in self.arrayGraphRes.enumerated() {
+                
+                let amount = dict["amount"] as? String
+
+                let dateString = dict["date"] as? String
+
+                testo = testo + "Data: " + dateString! + "\n" + amount! + " Euro\n\n"
+
+            }
+
+            print ("Dettaglio Ordini: \(testo)")
+            self.labelInfoOrder.setText(testo)
+            image = UIImage()
+            isThereTesto = true
+
         }
-        print ("TopUser \(testo)")
-        self.labelInfoOrder.setText(testo)
-        image = UIImage()
-        
-    
-    }
-    
         else
         {
-            print("don't support now.")
             image = UIImage()
+            testo = "caricamento dei dati in corso ritorna nel menu principale e riprova"
+            isThereTesto = true
         }
     
-        self.chartImage.setImage(image)
+        if (isThereTesto) {
+           self.labelInfoOrder.setText(testo)
+        } else
+        {
+            self.labelInfoOrder.setText("")
+        }
+        self.chartImage.setBackgroundImage(image)
     
     }
 
