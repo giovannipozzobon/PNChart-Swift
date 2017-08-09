@@ -35,7 +35,9 @@ class ChartInterfaceController: WKInterfaceController {
     let NKLightGreen = UIColor(colorLiteralRed:77.0 / 255.0, green:216.0 / 255.0, blue:122.0 / 255.0, alpha:1.0)
     let NKFreshGreen = UIColor(colorLiteralRed:77.0 / 255.0, green:196.0 / 255.0, blue:122.0 / 255.0, alpha:1.0)
     let NKDeepGreen = UIColor(colorLiteralRed:77.0 / 255.0, green:176.0 / 255.0, blue:122.0 / 255.0, alpha:1.0)
-
+    let NKBlack     = UIColor(colorLiteralRed:45.0 / 255.0, green:45.0 / 255.0, blue:45.0 / 255.0, alpha:1.0)
+    let NKBlackBlack = UIColor(colorLiteralRed:0.0 / 255.0, green:0.0 / 255.0, blue:0.0 / 255.0, alpha:1.0)
+    
     let shadowColor = UIColor(colorLiteralRed:225.0 / 255.0, green:225.0 / 255.0, blue:225.0 / 255.0, alpha:0.5)
     
      
@@ -74,26 +76,16 @@ class ChartInterfaceController: WKInterfaceController {
         if (self.chartType == "Line Chart" && self.graphLoaded)
         {
             let chart : NKLineChart = NKLineChart(frame: frame)
-            chart.yLabelFormat = "%1.1f"
-            //chart.xLabels=["SEP 1","SEP 2","SEP 3","SEP 4","SEP 5","SEP 6","SEP 7"]
+            //chart.yLabelFormat = "%1.1f"
+            chart.yLabelFormat = "%1.0f" //modified tolti i decimali
             
             chart.isShowCoordinateAxis = true
             
             //Use yFixedValueMax and yFixedValueMin to Fix the Max and Min Y Value
             //Only if you needed
-            chart.yFixedValueMax = 1000.0;
-            chart.yFixedValueMin = 0.0;
+            //chart.yFixedValueMax = 1000.0;
+            //chart.yFixedValueMin = 0.0;
             
-           /* chart.yLabels = [
-                "0",
-                "50",
-                "100",
-                "150",
-                "200",
-                "250",
-                "300",
-                ]
-*/
         
             
             chart.yLabelFont = UIFont.systemFont(ofSize: 6.0)
@@ -105,8 +97,8 @@ class ChartInterfaceController: WKInterfaceController {
             chart.axisColor = NKLightGrey;
             chart.axisWidth = 1.0;
             
-            chart.xUnit = "Day";
-            chart.yUnit = "Eur";
+            chart.xUnit = "Data";
+            chart.yUnit = "Euro";
             
             // Line Chart #1
             //let data01Array: [CGFloat] = [60.1, 160.1, 126.4, 0.0, 186.2, 127.2, 176.2]
@@ -168,13 +160,17 @@ class ChartInterfaceController: WKInterfaceController {
             
             chart.yLabelFormatter = { (yValue : CGFloat) -> String in
                 let yValueParsed = CGFloat(yValue);
-                let labelText : String = String(format:"%0.f",yValueParsed)
+                let labelText : String = String(format:"%1.0f",yValueParsed) // %1.f
                 return labelText
             }
-
-            
+                
             chart.labelMarginTop = 5.0
             chart.showChartBorder = true
+                
+            // aggiunte queste tre righe di codice per visualizzare meglio le lables Y
+            chart.chartMargin = 17.0
+            chart.yChartLabelWidth=15
+            chart.labelFont = UIFont.systemFont(ofSize:6.0)
            
             
             /*
@@ -187,6 +183,9 @@ class ChartInterfaceController: WKInterfaceController {
             chart.xLabels = []
             chart.yValues = []
             chart.strokeColors = []
+            chart.yLabels = []
+            chart.barBackgroundColor = NKBlackBlack
+            
             
             for (index, dict) in self.arrayGraphRes.enumerated() {
                 
@@ -198,6 +197,7 @@ class ChartInterfaceController: WKInterfaceController {
                 
                 chart.xLabels.append(Utility.convertDateToDayOnly(valore: dateString!))
                 chart.yValues.append(n)
+                chart.yLabels.append(n)
                 
                 chart.strokeColors.append(self.ColorArray[index%6])
                 
