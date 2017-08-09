@@ -43,7 +43,7 @@
                     <items>
                         <group width="136" height="153" alignment="left" id="iQ7-2N-UHA">
                             <items>
-                                <label width="0.0" alignment="center" verticalAlignment="center" accessibilityLabel="InfoOrder" accessibilityValue="Informazioni sull'ordine" text="Informazioni ordini" textAlignment="left" numberOfLines="16" id="iCI-Sp-AXe" userLabel="testo">
+                                <label width="0.0" alignment="center" accessibilityLabel="InfoOrder" accessibilityValue="Informazioni sull'ordine" text="Informazioni ordini" textAlignment="left" numberOfLines="0" id="iCI-Sp-AXe" userLabel="testo">
                                     <fontDescription key="font" type="system" pointSize="10"/>
                                 </label>
                             </items>

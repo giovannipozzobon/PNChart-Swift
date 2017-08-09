@@ -45,6 +45,7 @@
 		A3BD5A3E1EB3F5A700DDC1BF /* NKPieChartDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BD5A311EB3F5A700DDC1BF /* NKPieChartDataItem.m */; };
 		A3BD5A3F1EB3F5A700DDC1BF /* NKRadarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BD5A331EB3F5A700DDC1BF /* NKRadarChart.m */; };
 		A3BD5A401EB3F5A700DDC1BF /* NKRadarChartDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BD5A351EB3F5A700DDC1BF /* NKRadarChartDataItem.m */; };
+		A3E2820B1F3B612800CBE22A /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E2820A1F3B612800CBE22A /* Utility.swift */; };
 		A3FCA79A1EBD03CB000B1BE7 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = A3FCA7991EBD03CB000B1BE7 /* Cartfile */; };
 		A3FCA7A41EBD0F6B000B1BE7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3FCA7A01EBD0CCB000B1BE7 /* Alamofire.framework */; };
 		A3FCA7A81EBD0F77000B1BE7 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3FCA79E1EBD0CBA000B1BE7 /* SwiftyJSON.framework */; };
@@ -165,6 +166,7 @@
 		A3BD5A341EB3F5A700DDC1BF /* NKRadarChartDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NKRadarChartDataItem.h; path = NKWatchChart/NKRadarChartDataItem.h; sourceTree = SOURCE_ROOT; };
 		A3BD5A351EB3F5A700DDC1BF /* NKRadarChartDataItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NKRadarChartDataItem.m; path = NKWatchChart/NKRadarChartDataItem.m; sourceTree = SOURCE_ROOT; };
 		A3BD5A361EB3F5A700DDC1BF /* NKWatchChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NKWatchChart.h; path = NKWatchChart/NKWatchChart.h; sourceTree = SOURCE_ROOT; };
+		A3E2820A1F3B612800CBE22A /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		A3FCA7991EBD03CB000B1BE7 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		A3FCA79E1EBD0CBA000B1BE7 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "PNChartWatch Extension/Carthage/Build/watchOS/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		A3FCA7A01EBD0CCB000B1BE7 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "PNChartWatch Extension/Carthage/Build/watchOS/Alamofire.framework"; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 				A3BD5A211EB3F5A700DDC1BF /* PNChartWatch Extension-Bridging-Header.h */,
 				A3FCA7991EBD03CB000B1BE7 /* Cartfile */,
 				A3B598C81EC6562C00C97794 /* ExchangeData.swift */,
+				A3E2820A1F3B612800CBE22A /* Utility.swift */,
 			);
 			path = "PNChartWatch Extension";
 			sourceTree = "<group>";
@@ -610,6 +613,7 @@
 				A3BD5A3E1EB3F5A700DDC1BF /* NKPieChartDataItem.m in Sources */,
 				A3BD5A371EB3F5A700DDC1BF /* NKBarChart.m in Sources */,
 				A3BD5A381EB3F5A700DDC1BF /* NKCircleChart.m in Sources */,
+				A3E2820B1F3B612800CBE22A /* Utility.swift in Sources */,
 				A3BD5A3F1EB3F5A700DDC1BF /* NKRadarChart.m in Sources */,
 				A3BD5A401EB3F5A700DDC1BF /* NKRadarChartDataItem.m in Sources */,
 				A3B598C91EC6562C00C97794 /* ExchangeData.swift in Sources */,

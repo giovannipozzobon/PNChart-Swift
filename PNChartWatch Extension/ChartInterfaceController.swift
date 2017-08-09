@@ -38,18 +38,6 @@ class ChartInterfaceController: WKInterfaceController {
 
     let shadowColor = UIColor(colorLiteralRed:225.0 / 255.0, green:225.0 / 255.0, blue:225.0 / 255.0, alpha:0.5)
     
-    
-    func convertiData (dateString : String) -> String {
-        var truncated : String = ""
-        
-        if (dateString.characters.count>6){
-            let endIndex = dateString.index(dateString.startIndex, offsetBy: 6)
-            truncated = dateString.substring(from: endIndex)
-        }
-        print(truncated)
-        return truncated
-    }
-    
      
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -136,7 +124,7 @@ class ChartInterfaceController: WKInterfaceController {
                 chart.yLabels.append(number ??  "")
                 
                 let dateString = dict["date"] as? String
-                chart.xLabels.append(convertiData(dateString: dateString!))
+                chart.xLabels.append(Utility.convertDateToDayOnly(valore: dateString!))
 
 
             }
@@ -208,7 +196,7 @@ class ChartInterfaceController: WKInterfaceController {
                 
                 let dateString = dict["date"] as? String
                 
-                chart.xLabels.append(convertiData(dateString: dateString!))
+                chart.xLabels.append(Utility.convertDateToDayOnly(valore: dateString!))
                 chart.yValues.append(n)
                 
                 chart.strokeColors.append(self.ColorArray[index%6])
@@ -240,7 +228,7 @@ class ChartInterfaceController: WKInterfaceController {
                 
                 let dateString = dict["date"] as? String
                 
-                let item : NKPieChartDataItem = NKPieChartDataItem(value: n, color: self.ColorArray[index%6], description: convertiData(dateString: dateString!))
+                let item : NKPieChartDataItem = NKPieChartDataItem(value: n, color: self.ColorArray[index%6], description: Utility.convertDateToDayOnly(valore: dateString!))
                 items.append(item)
                 
                 
@@ -289,7 +277,7 @@ class ChartInterfaceController: WKInterfaceController {
                 
                 let dateString = dict["date"] as? String
                 
-                let item : NKRadarChartDataItem = NKRadarChartDataItem(value: n, description: convertiData(dateString: dateString!))
+                let item : NKRadarChartDataItem = NKRadarChartDataItem(value: n, description: Utility.convertDateToDayOnly(valore: dateString!))
                 items.append(item)
                 
                 
@@ -314,9 +302,8 @@ class ChartInterfaceController: WKInterfaceController {
                 
                 let contact = dict["Contact"] as? String
  
-                testo = testo + contact! + "\n"+amount! + " Euro\n\n"
-
-            
+                testo = testo + contact! + " \n" + Utility.convertCurrency(valore: amount!) + "\n\n"
+                
             }
             print ("TopOrder \(testo)")
             self.labelInfoOrder.setText(testo)
@@ -334,7 +321,7 @@ class ChartInterfaceController: WKInterfaceController {
 
                 let user = dict["User"] as? String
 
-                testo = testo + user! + "\n" + amount! + " Euro\n\n"
+                testo = testo + user! + "\n" + Utility.convertCurrency(valore: amount!) + "\n\n"
                     
                 }
             
@@ -353,7 +340,7 @@ class ChartInterfaceController: WKInterfaceController {
 
                 let dateString = dict["date"] as? String
 
-                testo = testo + "Data: " + dateString! + "\n" + amount! + " Euro\n\n"
+                testo = testo + "Data: " + Utility.convertDate(valore: dateString!) + "\n" + Utility.convertCurrency(valore: amount!) + "\n\n"
 
             }
 

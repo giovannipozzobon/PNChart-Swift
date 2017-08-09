@@ -35,7 +35,8 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
-        let querypointGraph : String = String("http://88.36.205.44:61862/QueryPoint/term.getOrdersAmount?qry=")
+        //let querypointGraph : String = String("http://88.36.205.44:61862/QueryPoint/term.getOrdersAmount?qry=")
+        let querypointGraph : String = String("http://192.168.0.230:61862/QueryPoint/term.getOrdersAmount?qry=")
 
         print(querypointGraph)
         
@@ -44,7 +45,8 @@ class InterfaceController: WKInterfaceController {
             "endDate": "20170801"
             ]
 
-        let querypointTopOrder : String = String("http://88.36.205.44:61862/QueryPoint/term.getTopOrder?qry=")
+        //let querypointTopOrder : String = String("http://88.36.205.44:61862/QueryPoint/term.getTopOrder?qry=")
+        let querypointTopOrder : String = String("http://192.168.0.230:61862/QueryPoint/term.getTopOrder?qry=")
         
         print(querypointTopOrder)
         
@@ -52,7 +54,8 @@ class InterfaceController: WKInterfaceController {
             "Date": "20170504"
         ]
  
-        let querypointTopUser : String = String("http://88.36.205.44:61862/QueryPoint/term.getTopUser?qry=")
+        //let querypointTopUser : String = String("http://88.36.205.44:61862/QueryPoint/term.getTopUser?qry=")
+        let querypointTopUser : String = String("http://192.168.0.230:61862/QueryPoint/term.getTopUser?qry=")
         
         print(querypointTopUser)
         
