@@ -1,14 +1,16 @@
 //
-//  ViewController.swift
-//  PNChartSwift
+//  SecondViewController.swift
+//  ManagementTool
 //
-//  Created by YiChen Zhou on 12/30/16.
-//
+//  Created by Giovanni Pozzobon on 07/04/17.
+//  Copyright © 2017 Giovanni Pozzobon. All rights reserved.
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
-class ViewController: UIViewController {
+class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,12 +62,12 @@ class ViewController: UIViewController {
         // Change the chart you want to present here
         self.view.addSubview(pieChart)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 
 }
 

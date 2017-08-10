@@ -85,7 +85,7 @@ class InterfaceController: WKInterfaceController {
                     
                     if let resData = swiftyJsonVar["results"].arrayObject {
                         self.datiScambiati.arrGraphRes = resData as! [[String:AnyObject]]
-                        print("datiScambiati.arrGraphRes: \(self.datiScambiati.arrGraphRes)")
+                        print("datiScambiati.arrGraphRes: \(self.datiScambiati.arrGraphRes) \n")
                     }
                     
                     self.graphLoaded = true
@@ -95,7 +95,7 @@ class InterfaceController: WKInterfaceController {
         }
         
         // carica i dati del top order
-        Alamofire.request(querypointTopOrder, method: .post, parameters: parametersTopOrder, encoding: JSONEncoding.default).responseJSON
+      Alamofire.request(querypointTopOrder, method: .post, parameters: parametersTopOrder, encoding: JSONEncoding.default).responseJSON
             { (responseData) -> Void in
                 
                 
@@ -112,7 +112,16 @@ class InterfaceController: WKInterfaceController {
                 }
                 
         }
-
+ 
+        
+        /*
+        // nuova chiamata a WebService usando l'oggetto webServiceCaller. Non funziona
+        let webServiceCaller = WebServiceCaller()
+        let webServiceInfo = WebServiceInfo()
+        webServiceCaller.webServiceInfo = webServiceInfo
+        webServiceCaller.callWebService(type: "term.getTopOrder", risultati: &self.datiScambiati.arrTopOrderRes)
+         print("datiScambiati.arrTopOrderRes: \(self.datiScambiati.arrTopOrderRes) \n")
+        */
         
         // carica i dati del top user
         Alamofire.request(querypointTopUser, method: .post, parameters: parametersTopUser, encoding: JSONEncoding.default).responseJSON
@@ -124,7 +133,7 @@ class InterfaceController: WKInterfaceController {
                     
                     if let resData = swiftyJsonVar["results"].arrayObject {
                         self.datiScambiati.arrTopUserRes = resData as! [[String:AnyObject]]
-                        print("datiScambiati.arrTopUserRes: \(self.datiScambiati.arrTopUserRes)")
+                        print("datiScambiati.arrTopUserRes: \(self.datiScambiati.arrTopUserRes) \n")
                     }
                     
                     self.topUserLoaded = true
