@@ -76,9 +76,6 @@ class ThirdViewController: UIViewController {
         print(userPassword)
         print(protocollo)
         
-        let vc_destinazione = self.tabBarController?.tabBarItem as! ThirdViewController
-        vc_destinazione..stringaDiPassaggio = "Passato 1"
-        
     }
 
     
@@ -99,7 +96,6 @@ class ThirdViewController: UIViewController {
         if let userName = defaults.string(forKey: "UserName") {
             print(userName)
             self.userNameText.text = userName
-            self.userNameText.text = stringaDiPassaggio
         }
         
         if let userPassword = defaults.string(forKey: "UserPassword")  {
