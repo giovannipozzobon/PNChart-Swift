@@ -24,6 +24,8 @@
 		3A9AD0BE1E17047700A1732F /* PNPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9AD0B31E17047700A1732F /* PNPieChart.swift */; };
 		3A9AD0BF1E17047700A1732F /* PNPieChartDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9AD0B41E17047700A1732F /* PNPieChartDataItem.swift */; };
 		3A9AD0C01E17047700A1732F /* PNValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9AD0B51E17047700A1732F /* PNValue.swift */; };
+		A3275F351F3DACEE00E56C02 /* TableViewChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3275F341F3DACEE00E56C02 /* TableViewChartController.swift */; };
+		A3275F371F3DAE0200E56C02 /* ChartVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3275F361F3DAE0200E56C02 /* ChartVIewController.swift */; };
 		A3B598C91EC6562C00C97794 /* ExchangeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B598C81EC6562C00C97794 /* ExchangeData.swift */; };
 		A3BD59D61EB356A700DDC1BF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BD59D41EB356A700DDC1BF /* Interface.storyboard */; };
 		A3BD59D81EB356A700DDC1BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3BD59D71EB356A700DDC1BF /* Assets.xcassets */; };
@@ -149,6 +151,8 @@
 		3A9AD0B31E17047700A1732F /* PNPieChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNPieChart.swift; sourceTree = "<group>"; };
 		3A9AD0B41E17047700A1732F /* PNPieChartDataItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNPieChartDataItem.swift; sourceTree = "<group>"; };
 		3A9AD0B51E17047700A1732F /* PNValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNValue.swift; sourceTree = "<group>"; };
+		A3275F341F3DACEE00E56C02 /* TableViewChartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewChartController.swift; sourceTree = "<group>"; };
+		A3275F361F3DAE0200E56C02 /* ChartVIewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartVIewController.swift; sourceTree = "<group>"; };
 		A3B598C81EC6562C00C97794 /* ExchangeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExchangeData.swift; path = "../PNChartWatch Extension/ExchangeData.swift"; sourceTree = "<group>"; };
 		A3BD59D21EB356A700DDC1BF /* PNChartWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PNChartWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3BD59D51EB356A700DDC1BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -264,6 +268,8 @@
 				A3E2820C1F3C8B2100CBE22A /* FirstViewController.swift */,
 				A3E2820D1F3C8B2100CBE22A /* SecondViewController.swift */,
 				A3E2820E1F3C8B2100CBE22A /* ThirdViewController.swift */,
+				A3275F341F3DACEE00E56C02 /* TableViewChartController.swift */,
+				A3275F361F3DAE0200E56C02 /* ChartVIewController.swift */,
 				3A9AD07F1E17043200A1732F /* Main.storyboard */,
 				3A9AD0821E17043200A1732F /* Assets.xcassets */,
 				3A9AD0841E17043200A1732F /* LaunchScreen.storyboard */,
@@ -605,6 +611,7 @@
 				3A9AD0B61E17047700A1732F /* PNBar.swift in Sources */,
 				3A9AD0BF1E17047700A1732F /* PNPieChartDataItem.swift in Sources */,
 				A3E282101F3C8B2100CBE22A /* SecondViewController.swift in Sources */,
+				A3275F371F3DAE0200E56C02 /* ChartVIewController.swift in Sources */,
 				3A9AD0BE1E17047700A1732F /* PNPieChart.swift in Sources */,
 				3A9AD0BA1E17047700A1732F /* PNGenericChart.swift in Sources */,
 				3A9AD0BD1E17047700A1732F /* PNLineChartDataItem.swift in Sources */,
@@ -617,6 +624,7 @@
 				3A9AD0BC1E17047700A1732F /* PNLineChartData.swift in Sources */,
 				A3E282111F3C8B2100CBE22A /* ThirdViewController.swift in Sources */,
 				A3E2820F1F3C8B2100CBE22A /* FirstViewController.swift in Sources */,
+				A3275F351F3DACEE00E56C02 /* TableViewChartController.swift in Sources */,
 				A3E282131F3C96E800CBE22A /* Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
