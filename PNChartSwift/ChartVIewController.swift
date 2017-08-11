@@ -11,6 +11,11 @@ import Alamofire
 import SwiftyJSON
 
 class ChartViewController: UIViewController {
+
+    
+    var chartType : String = ""
+    var exchangeData : ExchageData = ExchageData()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
