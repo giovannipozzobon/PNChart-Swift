@@ -114,14 +114,6 @@ class tableViewChartController: UITableViewController {
         }
         
         
-        /*
-         // nuova chiamata a WebService usando l'oggetto webServiceCaller. Non funziona
-         let webServiceCaller = WebServiceCaller()
-         let webServiceInfo = WebServiceInfo()
-         webServiceCaller.webServiceInfo = webServiceInfo
-         webServiceCaller.callWebService(type: "term.getTopOrder", risultati: &self.datiScambiati.arrTopOrderRes)
-         print("datiScambiati.arrTopOrderRes: \(self.datiScambiati.arrTopOrderRes) \n")
-         */
         
         // carica i dati del top user
         Alamofire.request(querypointTopUser, method: .post, parameters: parametersTopUser, encoding: JSONEncoding.default).responseJSON
@@ -165,13 +157,16 @@ class tableViewChartController: UITableViewController {
         
         // dar usare in caso di più view
         let vc_Name = vc_StoryBoardID[indexPath.row]
-        let viewController = storyboard?.instantiateViewController(withIdentifier: vc_Name)
-        self.navigationController?.pushViewController(viewController!, animated: true)
+        let viewController = (storyboard?.instantiateViewController(withIdentifier: vc_Name) as! ChartViewController)
         
+        viewController.exchangeData = datiScambiati
+        viewController.chartType = nameCharts[indexPath.row]
+        self.navigationController?.pushViewController(viewController, animated: true)
+
         
     }
     
-    
+    /* Questa funzione non viene chiamata perchè viene chiamata quella della ViewTable
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var  indexPath : IndexPath = self.tableView.indexPathForSelectedRow!
         
@@ -184,7 +179,9 @@ class tableViewChartController: UITableViewController {
         
         
     }
+     */
 
+ 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

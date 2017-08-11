@@ -60,7 +60,7 @@ class SecondViewController: UIViewController {
         lineChart.strokeChart()
         
         // Change the chart you want to present here
-        self.view.addSubview(pieChart)
+        self.view.addSubview(lineChart)
     }
     
     override func didReceiveMemoryWarning() {

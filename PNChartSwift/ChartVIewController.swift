@@ -19,6 +19,7 @@ class ChartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
         
         let item1 = PNPieChartDataItem(dateValue: 20, dateColor:  PNLightGreen, description: "Build")
@@ -32,24 +33,43 @@ class ChartViewController: UIViewController {
         pieChart.descriptionTextFont = UIFont(name: "Avenir-Medium", size: 14.0)!
         pieChart.center = self.view.center
         
-        let barChart = PNBarChart(frame: CGRect(x: 0.0, y: 135.0, width: 320.0, height: 200.0))
-        barChart.backgroundColor = UIColor.clear
-        barChart.animationType = .Waterfall
-        barChart.labelMarginTop = 5.0
-        barChart.xLabels = ["Sep 1", "Sep 2", "Sep 3", "Sep 4", "Sep 5", "Sep 6", "Sep 7"]
-        barChart.yValues = [1, 23, 12, 18, 30, 12, 21]
-        barChart.strokeChart()
-        barChart.center = self.view.center
+   
+        
+        
+        // old but good
         
         let lineChart = PNLineChart(frame: CGRect(x: 0.0, y: 135.0, width: 320.0, height: 250.0))
-        lineChart.yLabelFormat = "%1.1f"
+    
+        
+    
+        lineChart.yLabelFormat = "%1.0f"
         lineChart.showLabel = true
         lineChart.backgroundColor = UIColor.clear
-        lineChart.xLabels = ["Sep 1", "Sep 2", "Sep 3", "Sep 4", "Sep 5", "Sep 6", "Sep 7"]
         lineChart.showCoordinateAxis = true
         lineChart.center = self.view.center
+
+        lineChart.xLabelWidth = 10.0;
+        lineChart.axisWidth = 1.0;
+    
+        var data01Array: [CGFloat] = []
+        var xLabelArray: [String] = []
+        var yLabelArray: [String] = []
         
-        let dataArr = [60.1, 160.1, 126.4, 232.2, 186.2, 127.2, 176.2]
+        for (_, dict) in self.exchangeData.arrGraphRes.enumerated() {
+            
+            let number  = dict["amount"] as? String
+            let n = CGFloat((number! as NSString).floatValue)
+            yLabelArray.append(number!)
+            data01Array.append(n)
+            
+            let dateString = dict["date"] as? String
+            xLabelArray.append(Utility.convertDateToDayOnly(valore: dateString!))
+            
+        }
+    
+        
+        lineChart.xLabels = xLabelArray as NSArray
+        let dataArr = data01Array
         let data = PNLineChartData()
         data.color = PNGreen
         data.itemCount = dataArr.count
@@ -63,9 +83,24 @@ class ChartViewController: UIViewController {
         
         lineChart.chartData = [data]
         lineChart.strokeChart()
+  
+        let barChart = PNBarChart(frame: CGRect(x: 0.0, y: 135.0, width: 320.0, height: 200.0))
+        barChart.backgroundColor = UIColor.clear
+        barChart.animationType = .Waterfall
+        barChart.labelMarginTop = 5.0
+        barChart.xLabels = xLabelArray
+        barChart.yValues = data01Array
+        
+        barChart.yChartLabelWidth = 25
+        barChart.yLabels = yLabelArray
+        barChart.strokeChart()
+        barChart.center = self.view.center
+        
+        
+        
         
         // Change the chart you want to present here
-        self.view.addSubview(pieChart)
+        self.view.addSubview(barChart)
     }
     
     override func didReceiveMemoryWarning() {
