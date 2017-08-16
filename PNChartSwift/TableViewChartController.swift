@@ -64,6 +64,10 @@ class tableViewChartController: UITableViewController {
             "endDate": "20180505"
         ]
         
+        datiScambiati.graphLoaded = false
+        datiScambiati.topUserLoaded = false
+        datiScambiati.topOrderLoaded = false
+        
         
         /*    Alamofire.request(querypoint,  method: .post, parameters: parameters, encoding: JSONEncoding.default).response { response in
          //Alamofire.request("http://188.125.99.46:61862/QueryPoint/term.getOrdersAmount?qry={"startDate": "20100501","endDate": "20180505"}").response { response in
@@ -88,7 +92,7 @@ class tableViewChartController: UITableViewController {
                         print("datiScambiati.arrGraphRes: \(self.datiScambiati.arrGraphRes) \n")
                     }
                     
-                    self.graphLoaded = true
+                    self.datiScambiati.graphLoaded = true
                     
                 }
                 
@@ -107,7 +111,7 @@ class tableViewChartController: UITableViewController {
                         print("datiScambiati.arrTopOrderRes: \(self.datiScambiati.arrTopOrderRes)")
                     }
                     
-                    self.topOrderLoaded = true
+                    self.datiScambiati.topOrderLoaded = true
                     
                 }
                 
@@ -128,7 +132,7 @@ class tableViewChartController: UITableViewController {
                         print("datiScambiati.arrTopUserRes: \(self.datiScambiati.arrTopUserRes) \n")
                     }
                     
-                    self.topUserLoaded = true
+                    self.datiScambiati.topUserLoaded = true
                     
                 }
                 
