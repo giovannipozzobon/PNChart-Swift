@@ -28,6 +28,8 @@
 		A3275F371F3DAE0200E56C02 /* ChartVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3275F361F3DAE0200E56C02 /* ChartVIewController.swift */; };
 		A3275F391F45DAC700E56C02 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3275F381F45DAC700E56C02 /* InformationViewController.swift */; };
 		A3275F3B1F45DBFF00E56C02 /* TemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3275F3A1F45DBFF00E56C02 /* TemplateViewController.swift */; };
+		A33FC2C81F45E9A20061132E /* UserDefaultUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33FC2C71F45E9A20061132E /* UserDefaultUtility.swift */; };
+		A33FC2C91F45F06A0061132E /* UserDefaultUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33FC2C71F45E9A20061132E /* UserDefaultUtility.swift */; };
 		A3B598C91EC6562C00C97794 /* ExchangeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B598C81EC6562C00C97794 /* ExchangeData.swift */; };
 		A3BD59D61EB356A700DDC1BF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BD59D41EB356A700DDC1BF /* Interface.storyboard */; };
 		A3BD59D81EB356A700DDC1BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3BD59D71EB356A700DDC1BF /* Assets.xcassets */; };
@@ -157,6 +159,7 @@
 		A3275F361F3DAE0200E56C02 /* ChartVIewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartVIewController.swift; sourceTree = "<group>"; };
 		A3275F381F45DAC700E56C02 /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		A3275F3A1F45DBFF00E56C02 /* TemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateViewController.swift; sourceTree = "<group>"; };
+		A33FC2C71F45E9A20061132E /* UserDefaultUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultUtility.swift; sourceTree = "<group>"; };
 		A3B598C81EC6562C00C97794 /* ExchangeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExchangeData.swift; path = "../PNChartWatch Extension/ExchangeData.swift"; sourceTree = "<group>"; };
 		A3BD59D21EB356A700DDC1BF /* PNChartWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PNChartWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3BD59D51EB356A700DDC1BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -378,6 +381,7 @@
 		A3E282141F3C96FC00CBE22A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A33FC2C71F45E9A20061132E /* UserDefaultUtility.swift */,
 				A3E2820A1F3B612800CBE22A /* Utility.swift */,
 				A3B598C81EC6562C00C97794 /* ExchangeData.swift */,
 			);
@@ -624,6 +628,7 @@
 				3A9AD0B81E17047700A1732F /* PNChartLabel.swift in Sources */,
 				3A9AD0BB1E17047700A1732F /* PNLineChart.swift in Sources */,
 				3A9AD07C1E17043200A1732F /* AppDelegate.swift in Sources */,
+				A33FC2C81F45E9A20061132E /* UserDefaultUtility.swift in Sources */,
 				A3E282121F3C96E300CBE22A /* ExchangeData.swift in Sources */,
 				3A9AD0C01E17047700A1732F /* PNValue.swift in Sources */,
 				3A9AD0B91E17047700A1732F /* PNColor.swift in Sources */,
@@ -665,6 +670,7 @@
 				A3BD5A3D1EB3F5A700DDC1BF /* NKPieChart.m in Sources */,
 				A3BD5A3A1EB3F5A700DDC1BF /* NKLineChart.m in Sources */,
 				A3BD5A1E1EB3E38000DDC1BF /* ChartTableRowController.swift in Sources */,
+				A33FC2C91F45F06A0061132E /* UserDefaultUtility.swift in Sources */,
 				A3BD59E41EB356A700DDC1BF /* InterfaceController.swift in Sources */,
 				A3BD5A3E1EB3F5A700DDC1BF /* NKPieChartDataItem.m in Sources */,
 				A3BD5A371EB3F5A700DDC1BF /* NKBarChart.m in Sources */,
@@ -829,9 +835,16 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PNChartWatch\\ Extension/Carthage/Build/**",
+					"$(PROJECT_DIR)/PNChartWatch\\ Extension/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/PNChartWatch\\ Extension/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = PNChartSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PNChartWatch\\ Extension/Carthage/Build/**/**",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Demo.PNChartSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -848,6 +861,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PNChartWatch\\ Extension/Carthage/Build/**",
+					"$(PROJECT_DIR)/PNChartWatch\\ Extension/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/PNChartWatch\\ Extension/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = PNChartSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
