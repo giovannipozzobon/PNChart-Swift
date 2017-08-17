@@ -11,6 +11,9 @@ import Foundation
 class Utility : NSObject {
 
     static func convertCurrency (valore: String) -> String {
+        
+        if valore.isEmpty { return("0") }
+        
         var valore2 :String
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
@@ -25,6 +28,8 @@ class Utility : NSObject {
     
     static func convertDate (valore: String) -> String {
         
+        if (valore.isEmpty) || (valore.characters.count < 8) { return("") }
+        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYYMMDD"
         
@@ -35,6 +40,8 @@ class Utility : NSObject {
     }
     
     static func convertDateToDayOnly (valore: String) -> String {
+        
+        if (valore.isEmpty) || (valore.characters.count < 8) { return("") }
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYYMMDD"
