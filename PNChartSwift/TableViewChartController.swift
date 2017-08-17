@@ -29,14 +29,14 @@ class tableViewChartController: UITableViewController {
         
         super.viewDidLoad()
         // riempi l'array che poi saranno le righe della tabella
-        nameCharts = ["Line Chart", "Bar Chart", "Pie Chart", "Circle Chart", "Radar Chart", "Top Order", "Top User", "Dett Order"]
+        nameCharts = ["Line Chart", "Bar Chart", "Pie Chart", "Top Order", "Top User", "Dett Order"]
         
         // anche se non usate per ora prepariamo la gestione di più ViewControll chiamati una per una ogni riga della tabella
-        vc_StoryBoardID = ["Chart", "Chart", "Chart", "Chart", "Chart", "Chart", "Chart", "Chart"]
+        vc_StoryBoardID = ["Chart", "Chart", "Chart", "Information", "Information", "Information"]
 
     
-        let querypointGraph : String = String("http://88.36.205.44:61862/QueryPoint/term.getOrdersAmount?qry=")
-        //let querypointGraph : String = String("http://192.168.0.230:61862/QueryPoint/term.getOrdersAmount?qry=")
+        //let querypointGraph : String = String("http://88.36.205.44:61862/QueryPoint/term.getOrdersAmount?qry=")
+        let querypointGraph : String = String("http://192.168.0.230:61862/QueryPoint/term.getOrdersAmount?qry=")
         
         print(querypointGraph)
         
@@ -45,8 +45,8 @@ class tableViewChartController: UITableViewController {
             "endDate": "20170801"
         ]
         
-        let querypointTopOrder : String = String("http://88.36.205.44:61862/QueryPoint/term.getTopOrder?qry=")
-        //let querypointTopOrder : String = String("http://192.168.0.230:61862/QueryPoint/term.getTopOrder?qry=")
+        //let querypointTopOrder : String = String("http://88.36.205.44:61862/QueryPoint/term.getTopOrder?qry=")
+        let querypointTopOrder : String = String("http://192.168.0.230:61862/QueryPoint/term.getTopOrder?qry=")
         
         print(querypointTopOrder)
         
@@ -54,8 +54,8 @@ class tableViewChartController: UITableViewController {
             "Date": "20170504"
         ]
         
-        let querypointTopUser : String = String("http://88.36.205.44:61862/QueryPoint/term.getTopUser?qry=")
-        //let querypointTopUser : String = String("http://192.168.0.230:61862/QueryPoint/term.getTopUser?qry=")
+        //let querypointTopUser : String = String("http://88.36.205.44:61862/QueryPoint/term.getTopUser?qry=")
+        let querypointTopUser : String = String("http://192.168.0.230:61862/QueryPoint/term.getTopUser?qry=")
         
         print(querypointTopUser)
         
@@ -161,7 +161,7 @@ class tableViewChartController: UITableViewController {
         
         // dar usare in caso di più view
         let vc_Name = vc_StoryBoardID[indexPath.row]
-        let viewController = (storyboard?.instantiateViewController(withIdentifier: vc_Name) as! ChartViewController)
+        let viewController = (storyboard?.instantiateViewController(withIdentifier: vc_Name) as! TemplateViewController)
         
         viewController.exchangeData = datiScambiati
         viewController.chartType = nameCharts[indexPath.row]

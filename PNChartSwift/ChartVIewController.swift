@@ -7,14 +7,8 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
 
-class ChartViewController: UIViewController {
-
-    
-    var chartType : String = ""
-    var exchangeData : ExchageData = ExchageData()
+class ChartViewController: TemplateViewController {
 
     
     @IBOutlet weak var lblCaricamento: UILabel!
@@ -117,8 +111,18 @@ class ChartViewController: UIViewController {
             
             
             
-            // Change the chart you want to present here
-            self.view.addSubview(pieChart)
+            // Visualizza il grafico appropriato
+            switch chartType {
+            case "Line Chart":
+                self.view.addSubview(lineChart)
+            case "Bar Chart" :
+                self.view.addSubview(barChart)
+            case "Pie Chart" :
+                self.view.addSubview(pieChart)
+            default:
+                self.view.addSubview(lineChart)
+            }
+            
             
         }
     }

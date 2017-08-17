@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Information-->
+        <!--Home-->
         <scene sceneID="l0S-kW-QQT">
             <objects>
                 <viewController id="bwl-HS-5J6" customClass="FirstViewController" customModule="PNChartSwift" customModuleProvider="target" sceneMemberID="viewController">
@@ -43,7 +43,7 @@
                             <constraint firstItem="WKH-Jl-AyM" firstAttribute="top" secondItem="bj2-r9-8x6" secondAttribute="top" id="sTg-FZ-HSU"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Information" image="first" id="GWr-YU-9Lz"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="first" id="GWr-YU-9Lz"/>
                     <connections>
                         <outlet property="mainView" destination="bj2-r9-8x6" id="KIe-PC-6If"/>
                         <outlet property="myView" destination="WKH-Jl-AyM" id="CIX-c2-C4H"/>
@@ -146,7 +146,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="2gl-sK-fyp"/>
                     <connections>
-                        <segue destination="fuL-RO-K1Y" kind="show" identifier="segueToChrt" id="TGZ-9c-4cq"/>
+                        <segue destination="fuL-RO-K1Y" kind="show" identifier="segueToChart" id="TGZ-9c-4cq"/>
+                        <segue destination="stm-oo-esv" kind="show" identifier="segueToInformation" id="BBF-V7-sl7"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bYh-h7-kbE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -181,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fvG-be-GdG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="437.60000000000002" y="706.59670164917543"/>
+            <point key="canvasLocation" x="438" y="707"/>
         </scene>
         <!--Setting-->
         <scene sceneID="tn3-tx-0ge">
@@ -290,11 +291,11 @@
             </objects>
             <point key="canvasLocation" x="1105" y="795"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="dBz-eG-6CQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="i8T-ab-98Q" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="3tE-kw-bfu"/>
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="3tE-kw-bfu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zWd-tg-KN3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -308,6 +309,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17Y-cA-sJk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-935.20000000000005" y="706.59670164917543"/>
+        </scene>
+        <!--Information View Controller-->
+        <scene sceneID="5ly-sq-cGD">
+            <objects>
+                <viewController storyboardIdentifier="Information" id="stm-oo-esv" customClass="InformationViewController" customModule="PNChartSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bqz-5F-F1D"/>
+                        <viewControllerLayoutGuide type="bottom" id="YIi-Kt-yqa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ioO-86-XTi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" layoutMarginsFollowReadableWidth="YES" text="Informazioni ordini" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDJ-35-Bp6" userLabel="lbl Information">
+                                <rect key="frame" x="70" y="0.0" width="248" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblInformation" destination="kDJ-35-Bp6" id="PdI-iI-EVt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="maX-qp-yNl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="438" y="1406"/>
         </scene>
     </scenes>
     <resources>
