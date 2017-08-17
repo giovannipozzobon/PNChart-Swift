@@ -18,7 +18,8 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var myView: UIView!
     
     var webView: WKWebView!
-
+    
+    var userDefault: UserDefaultUtility = UserDefaultUtility()
     
     // valori dell'utente
     
@@ -41,11 +42,6 @@ class FirstViewController: UIViewController {
         //aggancia la progressbar
         self.webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
         
-        // carica i dati utente
-        readValueUser()
-        
-        //Apri la pagina
-        loadURL()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -93,31 +89,21 @@ class FirstViewController: UIViewController {
     
     
     func readValueUser() {
+
+            
+        userDefault.readValueUser()
         
-        let defaults = UserDefaults.standard
+        self.url = userDefault.url
         
-        if !(defaults.object(forKey: "URL") == nil) {self.url = defaults.string(forKey: "URL")!}
-        if !(defaults.object(forKey: "Port") == nil) {self.port = defaults.string(forKey: "Port")!}
-        if !(defaults.object(forKey: "UserName") == nil) {self.userName = defaults.string(forKey: "UserName")!}
-        if !(defaults.object(forKey: "UserPassword") == nil) {self.userPassword = defaults.string(forKey: "UserPassword")!}
-        if !(defaults.object(forKey: "Protocollo") == nil) {
-            self.protocollo = defaults.integer(forKey: "Protocollo")
-            }
+        self.port = userDefault.port
         
-        switch protocollo {
-        case 0:
-            protocolloStringa = "https://"
-        default:
-            protocolloStringa = "http://"
-        }
+        self.userName = userDefault.userName
         
-        // stampa le stringhe lette
-        print(self.url)
-        print(self.port)
-        print(self.userName)
-        print(self.userPassword)
-        print(self.protocollo)
-        print(self.protocolloStringa)
+        self.userPassword = userDefault.userPassword
+        
+        self.protocollo = userDefault.protocollo
+        
+        self.protocolloStringa = userDefault.protocolloStringa
         
     }
     

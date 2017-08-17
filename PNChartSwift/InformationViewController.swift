@@ -16,6 +16,8 @@ class InformationViewController: TemplateViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        // recupera le informazioni e prepara la label in base alla scelta fatta
         switch chartType {
             case "Top Order":
             
