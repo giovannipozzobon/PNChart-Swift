@@ -24,6 +24,8 @@ class tableViewChartController: UITableViewController {
     var graphLoaded : Bool = false;
     var topOrderLoaded : Bool = false;
     var topUserLoaded : Bool = false;
+
+    var userDefault: UserDefaultUtility = UserDefaultUtility()
     
     override func viewDidLoad() {
         
@@ -35,8 +37,12 @@ class tableViewChartController: UITableViewController {
         vc_StoryBoardID = ["Chart", "Chart", "Chart", "Information", "Information", "Information"]
 
     
+        // carica gli URL utente
+        userDefault.readValueUser()
+        
         //let querypointGraph : String = String("http://88.36.205.44:61862/QueryPoint/term.getOrdersAmount?qry=")
-        let querypointGraph : String = String("http://192.168.0.230:61862/QueryPoint/term.getOrdersAmount?qry=")
+        //let querypointGraph : String = String("http://192.168.0.230:61862/QueryPoint/term.getOrdersAmount?qry=")
+        let querypointGraph = userDefault.urlOrder
         
         print(querypointGraph)
         
@@ -46,8 +52,9 @@ class tableViewChartController: UITableViewController {
         ]
         
         //let querypointTopOrder : String = String("http://88.36.205.44:61862/QueryPoint/term.getTopOrder?qry=")
-        let querypointTopOrder : String = String("http://192.168.0.230:61862/QueryPoint/term.getTopOrder?qry=")
+        //let querypointTopOrder : String = String("http://192.168.0.230:61862/QueryPoint/term.getTopOrder?qry=")
         
+        let querypointTopOrder = userDefault.urlCustomer
         print(querypointTopOrder)
         
         let parametersTopOrder: Parameters = [
@@ -55,7 +62,9 @@ class tableViewChartController: UITableViewController {
         ]
         
         //let querypointTopUser : String = String("http://88.36.205.44:61862/QueryPoint/term.getTopUser?qry=")
-        let querypointTopUser : String = String("http://192.168.0.230:61862/QueryPoint/term.getTopUser?qry=")
+        //let querypointTopUser : String = String("http://192.168.0.230:61862/QueryPoint/term.getTopUser?qry=")
+        
+        let querypointTopUser = userDefault.urlSales
         
         print(querypointTopUser)
         
@@ -185,7 +194,6 @@ class tableViewChartController: UITableViewController {
     }
      */
 
- 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

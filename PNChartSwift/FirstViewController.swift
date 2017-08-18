@@ -20,15 +20,7 @@ class FirstViewController: UIViewController {
     var webView: WKWebView!
     
     var userDefault: UserDefaultUtility = UserDefaultUtility()
-    
-    // valori dell'utente
-    
-    var url : String = ""
-    var port : String = ""
-    var userName : String = ""
-    var userPassword : String = ""
-    var protocollo = 1
-    var protocolloStringa : String = "https://"
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +39,7 @@ class FirstViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         // ricarica i dati utente
-        readValueUser()
+        userDefault.readValueUser()
         
         //Apri la pagina
         loadURL()
@@ -63,16 +55,14 @@ class FirstViewController: UIViewController {
     func loadURL() {
         // esterno
         //var urlComposto: String = "http://88.36.205.44:8087/OnsalesServerGui_new/"
-        
         // interno 
-        var urlComposto: String = "http://192.168.0.230:8087/OnsalesServerGui_new/"
+        // var urlComposto: String = "http://192.168.0.230:8087/OnsalesServerGui_new/"
+ 
         
-        //carica la pagina
-        if !(self.url=="") {
-            urlComposto = "\(self.protocolloStringa)\(self.url):\(self.port)"
-            print(urlComposto)
+        var urlComposto = userDefault.urlServerGUI
+        if (urlComposto.isEmpty) {
+            urlComposto = "http://www.google.it"
         }
-        
         
         let urlDaCaricare = URL(string: urlComposto) // creo un URL partendo dalla stringa
         let request = URLRequest(url: urlDaCaricare!) // creo la richiesta da far effettuare alla webview
@@ -86,26 +76,6 @@ class FirstViewController: UIViewController {
             progressBar.setProgress(Float(webView.estimatedProgress), animated: true) // altrimenti aumenta il valore della proprietà progress
         }
     }
-    
-    
-    func readValueUser() {
-
-            
-        userDefault.readValueUser()
         
-        self.url = userDefault.url
-        
-        self.port = userDefault.port
-        
-        self.userName = userDefault.userName
-        
-        self.userPassword = userDefault.userPassword
-        
-        self.protocollo = userDefault.protocollo
-        
-        self.protocolloStringa = userDefault.protocolloStringa
-        
-    }
-    
 }
 

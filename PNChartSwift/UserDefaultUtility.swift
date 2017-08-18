@@ -14,8 +14,17 @@ class UserDefaultUtility: NSObject {
     var port : String = ""
     var userName : String = ""
     var userPassword : String = ""
-    var protocollo = 1
+    var protocollo : Int = 1
     var protocolloStringa : String = "https://"
+    var queryPointOrder : String = ""
+    var queryPointCustomer : String = ""
+    var queryPointSales : String = ""
+    var urlServerGUI : String = String("")
+    var urlOrder : String = ""
+    var urlCustomer : String = ""
+    var urlSales : String = ""
+    
+    
     
     func readValueUser() {
         
@@ -25,6 +34,10 @@ class UserDefaultUtility: NSObject {
         if !(defaults.object(forKey: "Port") == nil) {self.port = defaults.string(forKey: "Port")!}
         if !(defaults.object(forKey: "UserName") == nil) {self.userName = defaults.string(forKey: "UserName")!}
         if !(defaults.object(forKey: "UserPassword") == nil) {self.userPassword = defaults.string(forKey: "UserPassword")!}
+        if !(defaults.object(forKey: "QueryPointOrder") == nil) {self.queryPointOrder = defaults.string(forKey: "QueryPointOrder")!}
+        if !(defaults.object(forKey: "QueryPointCustomer") == nil) {self.queryPointCustomer = defaults.string(forKey: "QueryPointCustomer")!}
+        if !(defaults.object(forKey: "QueryPointSales") == nil) {self.queryPointSales = defaults.string(forKey: "QueryPointSales")!}
+        if !(defaults.object(forKey: "onSalesServerGUI") == nil) {self.urlServerGUI = defaults.string(forKey: "onSalesServerGUI")!}
         if !(defaults.object(forKey: "Protocollo") == nil) {
             self.protocollo = defaults.integer(forKey: "Protocollo")
         }
@@ -36,6 +49,12 @@ class UserDefaultUtility: NSObject {
             protocolloStringa = "http://"
         }
         
+        
+        urlOrder = protocolloStringa + url + ":" + port + "/" + queryPointOrder
+        urlCustomer = protocolloStringa + url + ":" + port + "/" + queryPointCustomer
+        urlSales = protocolloStringa + url + ":" + port + "/" + queryPointSales
+        
+        
         // stampa le stringhe lette
         print(self.url)
         print(self.port)
@@ -43,6 +62,15 @@ class UserDefaultUtility: NSObject {
         print(self.userPassword)
         print(self.protocollo)
         print(self.protocolloStringa)
+        print(self.queryPointOrder)
+        print(self.queryPointCustomer)
+        print(self.queryPointSales)
+        print(self.urlServerGUI)
+        print(self.urlOrder)
+        print(self.urlCustomer)
+        print(self.urlSales)
+
+    
         
     }
 
@@ -54,7 +82,12 @@ class UserDefaultUtility: NSObject {
         defaults.set(self.port, forKey: "Port")
         defaults.set(self.userName, forKey: "UserName")
         defaults.set(self.userPassword, forKey: "UserPassword")
+        defaults.set(self.queryPointOrder, forKey: "QueryPointOrder")
+        defaults.set(self.queryPointCustomer, forKey: "QueryPointCustomer")
+        defaults.set(self.queryPointSales, forKey: "QueryPointSales")
+        defaults.set(self.urlServerGUI, forKey: "onSalesServerGUI")
         defaults.set(self.protocollo, forKey: "Protocollo")
+        
         
         // stampa le stringhe salvate
         print(self.url)
@@ -62,6 +95,11 @@ class UserDefaultUtility: NSObject {
         print(self.userName)
         print(self.userPassword)
         print(self.protocollo)
+        print(self.queryPointOrder)
+        print(self.queryPointCustomer)
+        print(self.queryPointSales)
+        print(self.urlSales)
+        print(self.urlServerGUI)
         
     }
 

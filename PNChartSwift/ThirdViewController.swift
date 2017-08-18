@@ -16,6 +16,14 @@ class ThirdViewController: UIViewController {
     @IBOutlet weak var userPasswordText: UITextField!
     @IBOutlet weak var userNameText: UITextField!
 
+    @IBOutlet weak var queryPointOrderText: UITextField!
+    
+    @IBOutlet weak var queryPointCustomerText: UITextField!
+    
+    @IBOutlet weak var queryPointSalesText: UITextField!
+    
+    @IBOutlet weak var IndirizzoonSalesServerText: UITextField!
+    
     var userDefault: UserDefaultUtility = UserDefaultUtility()
     
     override func viewDidLoad() {
@@ -51,6 +59,22 @@ class ThirdViewController: UIViewController {
         if !self.userPasswordText.text!.isEmpty  {
             userDefault.userPassword = self.userPasswordText.text!
         }
+
+        if !self.queryPointOrderText.text!.isEmpty  {
+            userDefault.queryPointOrder = self.queryPointOrderText.text!
+        }
+        
+        if !self.queryPointCustomerText.text!.isEmpty  {
+            userDefault.queryPointCustomer = self.queryPointCustomerText.text!
+        }
+
+        if !self.queryPointSalesText.text!.isEmpty  {
+            userDefault.queryPointSales = self.queryPointSalesText.text!
+        }
+
+        if !self.IndirizzoonSalesServerText.text!.isEmpty  {
+            userDefault.urlServerGUI = self.IndirizzoonSalesServerText.text!
+        }
         
         userDefault.protocollo = self.protocolloSwitch.selectedSegmentIndex
         
@@ -70,7 +94,16 @@ class ThirdViewController: UIViewController {
         
         self.userPasswordText.text = userDefault.userPassword
         
+        self.queryPointOrderText.text = userDefault.queryPointOrder
+        
+        self.queryPointCustomerText.text = userDefault.queryPointCustomer
+        
+        self.queryPointSalesText.text = userDefault.queryPointSales
+        
+        self.IndirizzoonSalesServerText.text = userDefault.urlServerGUI
+        
         self.protocolloSwitch.setEnabled(true, forSegmentAt: userDefault.protocollo)
+        
         
     }
     
