@@ -7,16 +7,30 @@
 //
 
 import UIKit
+import WatchConnectivity
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     
     var window: UIWindow?
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let settings = UIUserNotificationSettings(
+            types: [.badge, .sound, .alert],
+            categories: nil)
+        UIApplication.shared.registerUserNotificationSettings(settings)
+        
+        if (WCSession.isSupported()) {
+            let session = WCSession.default()
+            session.delegate =  self
+            session.activate()
+        }
+        
         return true
+
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
@@ -42,4 +56,58 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
+    // =========================================================================
+    // MARK: - WCSessionDelegate
+    
+    func sessionWatchStateDidChange(_ session: WCSession) {
+        print(#function)
+        print(session)
+        print("reachable:\(session.isReachable)")
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        print(#function)
+        guard message["request"] as? String == "fireLocalNotification" else {return}
+        
+        let localNotification = UILocalNotification()
+        localNotification.alertBody = "Message Received!"
+        localNotification.fireDate = Date()
+        localNotification.soundName = UILocalNotificationDefaultSoundName;
+        
+        UIApplication.shared.scheduleLocalNotification(localNotification)
+    }
+    
+    
+    // Queste funzioni per eliminare l'errore "AppDelegate Does not Conform to WCSessionDelegate"
+    // https://forums.developer.apple.com/thread/49198
+    // https://stackoverflow.com/questions/38574384/watch-networking-broken-in-xcode-8-beta-3
+    // https://stackoverflow.com/questions/39513461/wcsessiondelegate-sessiondidbecomeinactive-and-sessiondiddeactivate-have-been-m
+    /** Called when the session has completed activation. If session state is WCSessionActivationStateNotActivated there will be an error with more details. */
+    @available(iOS 9.3, *)
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        if activationState == WCSessionActivationState.activated {
+            NSLog("Activated")
+        }
+        
+        if activationState == WCSessionActivationState.inactive {
+            NSLog("Inactive")
+        }
+        
+        if activationState == WCSessionActivationState.notActivated {
+            NSLog("NotActivated")
+        }
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        NSLog("sessionDidBecomeInactive")
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        NSLog("sessionDidDeactivate")
+        
+        // Begin the activation process for the new Apple Watch.
+        WCSession.default().activate()
+    }
+
 }
+

@@ -132,16 +132,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3A9AD0781E17043200A1732F /* PNChartSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PNChartSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A9AD0781E17043200A1732F /* onSalesiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = onSalesiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A9AD07B1E17043200A1732F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A9AD0801E17043200A1732F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A9AD0821E17043200A1732F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A9AD0851E17043200A1732F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A9AD0871E17043200A1732F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A9AD08C1E17043200A1732F /* PNChartSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PNChartSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A9AD08C1E17043200A1732F /* onSalesiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = onSalesiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A9AD0901E17043200A1732F /* PNChartSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNChartSwiftTests.swift; sourceTree = "<group>"; };
 		3A9AD0921E17043200A1732F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A9AD0971E17043200A1732F /* PNChartSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PNChartSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A9AD0971E17043200A1732F /* onSalesiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = onSalesiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A9AD09B1E17043200A1732F /* PNChartSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNChartSwiftUITests.swift; sourceTree = "<group>"; };
 		3A9AD09D1E17043200A1732F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../PNChartSwiftUITests/Info.plist; sourceTree = "<group>"; };
 		3A9AD0AB1E17047700A1732F /* PNBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNBar.swift; sourceTree = "<group>"; };
@@ -159,6 +159,10 @@
 		A3275F361F3DAE0200E56C02 /* ChartVIewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartVIewController.swift; sourceTree = "<group>"; };
 		A3275F381F45DAC700E56C02 /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		A3275F3A1F45DBFF00E56C02 /* TemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateViewController.swift; sourceTree = "<group>"; };
+		A33112101F4F1AAD00FB87EB /* onSalesiOSDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = onSalesiOSDemo.entitlements; sourceTree = "<group>"; };
+		A33112111F4F1B0000FB87EB /* PNChartWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PNChartWatch.entitlements; sourceTree = "<group>"; };
+		A33112121F4F1B2D00FB87EB /* PNChartWatch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PNChartWatch Extension.entitlements"; sourceTree = "<group>"; };
+		A33112131F4F26BC00FB87EB /* onSalesiOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = onSalesiOS.entitlements; sourceTree = "<group>"; };
 		A33FC2C71F45E9A20061132E /* UserDefaultUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultUtility.swift; sourceTree = "<group>"; };
 		A3B598C81EC6562C00C97794 /* ExchangeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExchangeData.swift; path = "../PNChartWatch Extension/ExchangeData.swift"; sourceTree = "<group>"; };
 		A3BD59D21EB356A700DDC1BF /* PNChartWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PNChartWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,6 +246,8 @@
 		3A9AD06F1E17043200A1732F = {
 			isa = PBXGroup;
 			children = (
+				A33112131F4F26BC00FB87EB /* onSalesiOS.entitlements */,
+				A33112101F4F1AAD00FB87EB /* onSalesiOSDemo.entitlements */,
 				A3E282261F3CB92C00CBE22A /* SwiftyJSON.framework */,
 				A3E282221F3CB91900CBE22A /* Alamofire.framework */,
 				3A9AD07A1E17043200A1732F /* PNChartSwift */,
@@ -258,9 +264,9 @@
 		3A9AD0791E17043200A1732F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3A9AD0781E17043200A1732F /* PNChartSwift.app */,
-				3A9AD08C1E17043200A1732F /* PNChartSwiftTests.xctest */,
-				3A9AD0971E17043200A1732F /* PNChartSwiftUITests.xctest */,
+				3A9AD0781E17043200A1732F /* onSalesiOS.app */,
+				3A9AD08C1E17043200A1732F /* onSalesiOSTests.xctest */,
+				3A9AD0971E17043200A1732F /* onSalesiOSUITests.xctest */,
 				A3BD59D21EB356A700DDC1BF /* PNChartWatch.app */,
 				A3BD59DE1EB356A700DDC1BF /* PNChartWatch Extension.appex */,
 			);
@@ -326,6 +332,7 @@
 		A3BD59D31EB356A700DDC1BF /* PNChartWatch */ = {
 			isa = PBXGroup;
 			children = (
+				A33112111F4F1B0000FB87EB /* PNChartWatch.entitlements */,
 				A3BD59D41EB356A700DDC1BF /* Interface.storyboard */,
 				A3BD59D71EB356A700DDC1BF /* Assets.xcassets */,
 				A3BD59D91EB356A700DDC1BF /* Info.plist */,
@@ -336,6 +343,7 @@
 		A3BD59E21EB356A700DDC1BF /* PNChartWatch Extension */ = {
 			isa = PBXGroup;
 			children = (
+				A33112121F4F1B2D00FB87EB /* PNChartWatch Extension.entitlements */,
 				3A9AD09D1E17043200A1732F /* Info.plist */,
 				A3BD5A411EB3F5C900DDC1BF /* ChartObjectC */,
 				A3BD59F51EB381E400DDC1BF /* ChartInterfaceController.swift */,
@@ -401,9 +409,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3A9AD0771E17043200A1732F /* PNChartSwift */ = {
+		3A9AD0771E17043200A1732F /* onSalesiOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A9AD0A01E17043200A1732F /* Build configuration list for PBXNativeTarget "PNChartSwift" */;
+			buildConfigurationList = 3A9AD0A01E17043200A1732F /* Build configuration list for PBXNativeTarget "onSalesiOS" */;
 			buildPhases = (
 				3A9AD0741E17043200A1732F /* Sources */,
 				3A9AD0751E17043200A1732F /* Frameworks */,
@@ -416,14 +424,14 @@
 			dependencies = (
 				A3BD59EB1EB356A700DDC1BF /* PBXTargetDependency */,
 			);
-			name = PNChartSwift;
+			name = onSalesiOS;
 			productName = PNChartSwift;
-			productReference = 3A9AD0781E17043200A1732F /* PNChartSwift.app */;
+			productReference = 3A9AD0781E17043200A1732F /* onSalesiOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3A9AD08B1E17043200A1732F /* PNChartSwiftTests */ = {
+		3A9AD08B1E17043200A1732F /* onSalesiOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A9AD0A31E17043200A1732F /* Build configuration list for PBXNativeTarget "PNChartSwiftTests" */;
+			buildConfigurationList = 3A9AD0A31E17043200A1732F /* Build configuration list for PBXNativeTarget "onSalesiOSTests" */;
 			buildPhases = (
 				3A9AD0881E17043200A1732F /* Sources */,
 				3A9AD0891E17043200A1732F /* Frameworks */,
@@ -434,14 +442,14 @@
 			dependencies = (
 				3A9AD08E1E17043200A1732F /* PBXTargetDependency */,
 			);
-			name = PNChartSwiftTests;
+			name = onSalesiOSTests;
 			productName = PNChartSwiftTests;
-			productReference = 3A9AD08C1E17043200A1732F /* PNChartSwiftTests.xctest */;
+			productReference = 3A9AD08C1E17043200A1732F /* onSalesiOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3A9AD0961E17043200A1732F /* PNChartSwiftUITests */ = {
+		3A9AD0961E17043200A1732F /* onSalesiOSUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A9AD0A61E17043200A1732F /* Build configuration list for PBXNativeTarget "PNChartSwiftUITests" */;
+			buildConfigurationList = 3A9AD0A61E17043200A1732F /* Build configuration list for PBXNativeTarget "onSalesiOSUITests" */;
 			buildPhases = (
 				3A9AD0931E17043200A1732F /* Sources */,
 				3A9AD0941E17043200A1732F /* Frameworks */,
@@ -452,9 +460,9 @@
 			dependencies = (
 				3A9AD0991E17043200A1732F /* PBXTargetDependency */,
 			);
-			name = PNChartSwiftUITests;
+			name = onSalesiOSUITests;
 			productName = PNChartSwiftUITests;
-			productReference = 3A9AD0971E17043200A1732F /* PNChartSwiftUITests.xctest */;
+			productReference = 3A9AD0971E17043200A1732F /* onSalesiOSUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		A3BD59D11EB356A700DDC1BF /* PNChartWatch */ = {
@@ -503,31 +511,50 @@
 				TargetAttributes = {
 					3A9AD0771E17043200A1732F = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = JYKC96M9FK;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					3A9AD08B1E17043200A1732F = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = JYKC96M9FK;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3A9AD0771E17043200A1732F;
 					};
 					3A9AD0961E17043200A1732F = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = JYKC96M9FK;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3A9AD0771E17043200A1732F;
 					};
 					A3BD59D11EB356A700DDC1BF = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = JYKC96M9FK;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					A3BD59DD1EB356A700DDC1BF = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = JYKC96M9FK;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
-			buildConfigurationList = 3A9AD0731E17043200A1732F /* Build configuration list for PBXProject "PNChartSwift" */;
+			buildConfigurationList = 3A9AD0731E17043200A1732F /* Build configuration list for PBXProject "onSalesiOS" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -540,9 +567,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3A9AD0771E17043200A1732F /* PNChartSwift */,
-				3A9AD08B1E17043200A1732F /* PNChartSwiftTests */,
-				3A9AD0961E17043200A1732F /* PNChartSwiftUITests */,
+				3A9AD0771E17043200A1732F /* onSalesiOS */,
+				3A9AD08B1E17043200A1732F /* onSalesiOSTests */,
+				3A9AD0961E17043200A1732F /* onSalesiOSUITests */,
 				A3BD59D11EB356A700DDC1BF /* PNChartWatch */,
 				A3BD59DD1EB356A700DDC1BF /* PNChartWatch Extension */,
 			);
@@ -687,12 +714,12 @@
 /* Begin PBXTargetDependency section */
 		3A9AD08E1E17043200A1732F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3A9AD0771E17043200A1732F /* PNChartSwift */;
+			target = 3A9AD0771E17043200A1732F /* onSalesiOS */;
 			targetProxy = 3A9AD08D1E17043200A1732F /* PBXContainerItemProxy */;
 		};
 		3A9AD0991E17043200A1732F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3A9AD0771E17043200A1732F /* PNChartSwift */;
+			target = 3A9AD0771E17043200A1732F /* onSalesiOS */;
 			targetProxy = 3A9AD0981E17043200A1732F /* PBXContainerItemProxy */;
 		};
 		A3BD59E11EB356A700DDC1BF /* PBXTargetDependency */ = {
@@ -832,6 +859,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = onSalesiOS.entitlements;
+				DEVELOPMENT_TEAM = JYKC96M9FK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PNChartWatch\\ Extension/Carthage/Build/**",
@@ -846,7 +875,7 @@
 				);
 				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = Demo.PNChartSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = Demo.onSalesiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				"SWIFT_OBJC_INTERFACE_HEADER_NAME[arch=*]" = "$(SWIFT_MODULE_NAME)-Swift.h";
@@ -858,6 +887,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = onSalesiOS.entitlements;
+				DEVELOPMENT_TEAM = JYKC96M9FK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PNChartWatch\\ Extension/Carthage/Build/**",
@@ -867,7 +898,7 @@
 				INFOPLIST_FILE = PNChartSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = Demo.PNChartSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = Demo.onSalesiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -878,6 +909,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = JYKC96M9FK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PNChartWatch\\ Extension/Carthage/Build/watchOS",
@@ -887,7 +919,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Demo.PNChartSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PNChartSwift.app/PNChartSwift";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/onSalesiOS.app/onSalesiOS";
 			};
 			name = Debug;
 		};
@@ -896,6 +928,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = JYKC96M9FK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PNChartWatch\\ Extension/Carthage/Build/watchOS",
@@ -905,7 +938,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Demo.PNChartSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PNChartSwift.app/PNChartSwift";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/onSalesiOS.app/onSalesiOS";
 			};
 			name = Release;
 		};
@@ -913,6 +946,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = JYKC96M9FK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PNChartWatch\\ Extension/Carthage/Build/watchOS",
@@ -930,6 +964,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = JYKC96M9FK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PNChartWatch\\ Extension/Carthage/Build/watchOS",
@@ -949,9 +984,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = PNChartWatch/PNChartWatch.entitlements;
+				DEVELOPMENT_TEAM = JYKC96M9FK;
 				IBSC_MODULE = PNChartWatch_Extension;
 				INFOPLIST_FILE = PNChartWatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = Demo.PNChartSwift.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = Demo.onSalesiOS.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -967,9 +1004,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = PNChartWatch/PNChartWatch.entitlements;
+				DEVELOPMENT_TEAM = JYKC96M9FK;
 				IBSC_MODULE = PNChartWatch_Extension;
 				INFOPLIST_FILE = PNChartWatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = Demo.PNChartSwift.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = Demo.onSalesiOS.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -985,6 +1024,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "PNChartWatch Extension/PNChartWatch Extension.entitlements";
 				DEVELOPMENT_TEAM = JYKC96M9FK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -992,7 +1032,7 @@
 				);
 				INFOPLIST_FILE = "PNChartWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Demo.PNChartSwift.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = Demo.onSalesiOS.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1010,6 +1050,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "PNChartWatch Extension/PNChartWatch Extension.entitlements";
 				DEVELOPMENT_TEAM = JYKC96M9FK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1017,7 +1058,7 @@
 				);
 				INFOPLIST_FILE = "PNChartWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Demo.PNChartSwift.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = Demo.onSalesiOS.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1031,7 +1072,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3A9AD0731E17043200A1732F /* Build configuration list for PBXProject "PNChartSwift" */ = {
+		3A9AD0731E17043200A1732F /* Build configuration list for PBXProject "onSalesiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A9AD09E1E17043200A1732F /* Debug */,
@@ -1040,7 +1081,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A9AD0A01E17043200A1732F /* Build configuration list for PBXNativeTarget "PNChartSwift" */ = {
+		3A9AD0A01E17043200A1732F /* Build configuration list for PBXNativeTarget "onSalesiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A9AD0A11E17043200A1732F /* Debug */,
@@ -1049,7 +1090,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A9AD0A31E17043200A1732F /* Build configuration list for PBXNativeTarget "PNChartSwiftTests" */ = {
+		3A9AD0A31E17043200A1732F /* Build configuration list for PBXNativeTarget "onSalesiOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A9AD0A41E17043200A1732F /* Debug */,
@@ -1058,7 +1099,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A9AD0A61E17043200A1732F /* Build configuration list for PBXNativeTarget "PNChartSwiftUITests" */ = {
+		3A9AD0A61E17043200A1732F /* Build configuration list for PBXNativeTarget "onSalesiOSUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A9AD0A71E17043200A1732F /* Debug */,

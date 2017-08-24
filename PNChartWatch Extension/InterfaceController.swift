@@ -10,12 +10,14 @@ import WatchKit
 import Foundation
 import Alamofire
 import SwiftyJSON
+import WatchConnectivity
 
-
-class InterfaceController: WKInterfaceController {
+class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     var datiScambiati : ExchageData = ExchageData()
     var chartTypes : Array<String> = [];
+
+    var userDefault: UserDefaultUtility = UserDefaultUtility()    
     
     @IBOutlet var chartTable: WKInterfaceTable!
     
@@ -28,16 +30,26 @@ class InterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        // Configure interface objects here.
+        // Activate the session on both sides to enable communication.
+        if (WCSession.isSupported()) {
+            let session = WCSession.default()
+            session.delegate = self // conforms to WCSessionDelegate
+            session.activate()
+        }
     }
     
     override func willActivate()  {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+
+        // ricarica i dati utente
+        userDefault.readValueUser()
+                
         
         //let querypointGraph : String = String("http://88.36.205.44:61862/QueryPoint/term.getOrdersAmount?qry=")
-        let querypointGraph : String = String("http://192.168.0.230:61862/QueryPoint/term.getOrdersAmount?qry=")
-
+        //let querypointGraph : String = String("http://192.168.0.230:61862/QueryPoint/term.getOrdersAmount?qry=")
+        let querypointGraph = userDefault.urlOrder
+        
         print(querypointGraph)
         
         let parametersGraph: Parameters = [
@@ -46,7 +58,8 @@ class InterfaceController: WKInterfaceController {
             ]
 
         //let querypointTopOrder : String = String("http://88.36.205.44:61862/QueryPoint/term.getTopOrder?qry=")
-        let querypointTopOrder : String = String("http://192.168.0.230:61862/QueryPoint/term.getTopOrder?qry=")
+        //let querypointTopOrder : String = String("http://192.168.0.230:61862/QueryPoint/term.getTopOrder?qry=")
+        let querypointTopOrder = userDefault.urlCustomer
         
         print(querypointTopOrder)
         
@@ -55,7 +68,8 @@ class InterfaceController: WKInterfaceController {
         ]
  
         //let querypointTopUser : String = String("http://88.36.205.44:61862/QueryPoint/term.getTopUser?qry=")
-        let querypointTopUser : String = String("http://192.168.0.230:61862/QueryPoint/term.getTopUser?qry=")
+        //let querypointTopUser : String = String("http://192.168.0.230:61862/QueryPoint/term.getTopUser?qry=")
+        let querypointTopUser = userDefault.urlSales
         
         print(querypointTopUser)
         
@@ -164,7 +178,49 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
+
+    // =========================================================================
+    // MARK: - WCSessionDelegate
+
+        @available(iOS 9.3, watchOS 2.2, *)
+        public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+            
+            
+            print(#function)
+            print("sessione : activationDidCompleteWith")
+
+    }
     
+    // Received message from iPhone
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        print(#function)
+        
+        print(message)
+        
+        userDefault.saveValueDictonary(dict : message)
+
+        
+        /*
+        guard message["request"] as? String == "showAlert" else {return}
+        
+        
+        let defaultAction = WKAlertAction(
+            title: "OK",
+            style: WKAlertActionStyle.default) { () -> Void in
+        }
+        
+        lancia un alert per le prove di comunicazione
+        let actions = [defaultAction]
+        
+        self.presentAlert(
+            withTitle: "Message Received",
+            message: "",
+            preferredStyle: WKAlertControllerStyle.alert,
+            actions: actions)
+        */
+    }
+ 
+
     override func contextForSegue(withIdentifier segueIdentifier: String, in table: WKInterfaceTable, rowIndex: Int) -> Any? {
 
             //return self.chartTypes[rowIndex]

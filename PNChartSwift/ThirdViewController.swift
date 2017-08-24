@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WatchConnectivity
 
 class ThirdViewController: UIViewController {
     
@@ -26,6 +27,7 @@ class ThirdViewController: UIViewController {
     
     var userDefault: UserDefaultUtility = UserDefaultUtility()
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -79,6 +81,28 @@ class ThirdViewController: UIViewController {
         userDefault.protocollo = self.protocolloSwitch.selectedSegmentIndex
         
         userDefault.saveValueUser()
+        
+        // check the reachablity e invia i dati al Watch
+        if WCSession.default().isReachable == false {
+            
+            let alert = UIAlertController(
+                title: "Failed to send",
+                message: "Apple Watch is not reachable.",
+                preferredStyle: UIAlertControllerStyle.alert)
+            self.present(alert, animated: true, completion: nil)
+            
+            return
+        }
+        
+        //let message = ["request": "showAlert"]
+        let message = userDefault.returnDictonaryValue()
+        WCSession.default().sendMessage(
+            message, replyHandler: { (replyMessage) -> Void in
+                //
+        }) { (error) -> Void in
+            print(error.localizedDescription)
+        }
+        
         
     }
 
