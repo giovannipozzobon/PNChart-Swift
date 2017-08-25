@@ -86,15 +86,15 @@ class ThirdViewController: UIViewController {
         if WCSession.default().isReachable == false {
             
             let alert = UIAlertController(
-                title: "Failed to send",
-                message: "Apple Watch is not reachable.",
+                title: "Imossibile inviare i dati al Watch",
+                message: "Apple Watch non è raggiungibile.",
                 preferredStyle: UIAlertControllerStyle.alert)
             self.present(alert, animated: true, completion: nil)
             
             return
         }
         
-        //let message = ["request": "showAlert"]
+        //Prepara il messaggio per l'Apple Watch e invialo
         let message = userDefault.returnDictonaryValue()
         WCSession.default().sendMessage(
             message, replyHandler: { (replyMessage) -> Void in

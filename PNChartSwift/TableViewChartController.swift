@@ -159,10 +159,10 @@ class tableViewChartController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell =  tableView.dequeueReusableCell(withIdentifier: "Cell")
-        cell?.textLabel?.text = nameCharts[indexPath.row]
+        let cell =  tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.text = nameCharts[indexPath.row]
         
-        return cell!
+        return cell
     }
     
     
@@ -178,8 +178,9 @@ class tableViewChartController: UITableViewController {
 
         
     }
+ 
     
-    /* Questa funzione non viene chiamata perchè viene chiamata quella della ViewTable
+    /* Questa funzione non viene chiamata perchè viene usata quella della ViewTable */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var  indexPath : IndexPath = self.tableView.indexPathForSelectedRow!
         
@@ -192,7 +193,7 @@ class tableViewChartController: UITableViewController {
         
         
     }
-     */
+ 
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -8,6 +8,7 @@
 
 import UIKit
 import WatchConnectivity
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
@@ -17,11 +18,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        let settings = UIUserNotificationSettings(
-            types: [.badge, .sound, .alert],
-            categories: nil)
-        UIApplication.shared.registerUserNotificationSettings(settings)
+ 
+        // iOS 10 support
+        if #available(iOS 10, *) {
+            UNUserNotificationCenter.current().requestAuthorization(options:[.badge, .alert, .sound]){ (granted, error) in }
+            application.registerForRemoteNotifications()
+        }
+            // iOS 9 e 8 support
+        else {
+            UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge, .sound, .alert], categories: nil))
+            UIApplication.shared.registerForRemoteNotifications()
+        }
         
         if (WCSession.isSupported()) {
             let session = WCSession.default()
@@ -67,14 +74,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         print(#function)
+        
         guard message["request"] as? String == "fireLocalNotification" else {return}
-        
-        let localNotification = UILocalNotification()
-        localNotification.alertBody = "Message Received!"
-        localNotification.fireDate = Date()
-        localNotification.soundName = UILocalNotificationDefaultSoundName;
-        
-        UIApplication.shared.scheduleLocalNotification(localNotification)
+   
+        // iOS 10 support
+        if #available(iOS 10, *) { // Attenzione la versione iOS 10 non è mai stata utilizzata
+            let content = UNMutableNotificationContent()
+            content.sound = UNNotificationSound.default()
+            content.title = "Message Received!"
+            
+            _ = UNNotificationRequest(identifier: "id", content: content, trigger: nil)
+        }
+            // iOS 9 e 8 support
+        else {
+            let localNotification = UILocalNotification()
+            localNotification.alertBody = "Message Received!"
+            localNotification.fireDate = Date()
+            localNotification.soundName = UILocalNotificationDefaultSoundName;
+            
+            UIApplication.shared.scheduleLocalNotification(localNotification)
+        }
     }
     
     

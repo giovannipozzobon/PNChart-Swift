@@ -28,6 +28,7 @@
 		A3275F371F3DAE0200E56C02 /* ChartVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3275F361F3DAE0200E56C02 /* ChartVIewController.swift */; };
 		A3275F391F45DAC700E56C02 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3275F381F45DAC700E56C02 /* InformationViewController.swift */; };
 		A3275F3B1F45DBFF00E56C02 /* TemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3275F3A1F45DBFF00E56C02 /* TemplateViewController.swift */; };
+		A33112151F4FF6B100FB87EB /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33112141F4FF6B100FB87EB /* UserNotifications.framework */; };
 		A33FC2C81F45E9A20061132E /* UserDefaultUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33FC2C71F45E9A20061132E /* UserDefaultUtility.swift */; };
 		A33FC2C91F45F06A0061132E /* UserDefaultUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33FC2C71F45E9A20061132E /* UserDefaultUtility.swift */; };
 		A3B598C91EC6562C00C97794 /* ExchangeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B598C81EC6562C00C97794 /* ExchangeData.swift */; };
@@ -163,6 +164,7 @@
 		A33112111F4F1B0000FB87EB /* PNChartWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PNChartWatch.entitlements; sourceTree = "<group>"; };
 		A33112121F4F1B2D00FB87EB /* PNChartWatch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PNChartWatch Extension.entitlements"; sourceTree = "<group>"; };
 		A33112131F4F26BC00FB87EB /* onSalesiOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = onSalesiOS.entitlements; sourceTree = "<group>"; };
+		A33112141F4FF6B100FB87EB /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		A33FC2C71F45E9A20061132E /* UserDefaultUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultUtility.swift; sourceTree = "<group>"; };
 		A3B598C81EC6562C00C97794 /* ExchangeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExchangeData.swift; path = "../PNChartWatch Extension/ExchangeData.swift"; sourceTree = "<group>"; };
 		A3BD59D21EB356A700DDC1BF /* PNChartWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PNChartWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +216,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A33112151F4FF6B100FB87EB /* UserNotifications.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +403,7 @@
 		A3FCA79D1EBD0CBA000B1BE7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A33112141F4FF6B100FB87EB /* UserNotifications.framework */,
 				A3FCA7A01EBD0CCB000B1BE7 /* Alamofire.framework */,
 				A3FCA79E1EBD0CBA000B1BE7 /* SwiftyJSON.framework */,
 			);

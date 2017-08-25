@@ -13,7 +13,7 @@
         <!--Home-->
         <scene sceneID="l0S-kW-QQT">
             <objects>
-                <viewController id="bwl-HS-5J6" customClass="FirstViewController" customModule="PNChartSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bwl-HS-5J6" customClass="FirstViewController" customModule="onSalesiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XZ0-9X-QTM"/>
                         <viewControllerLayoutGuide type="bottom" id="Gu1-Gv-9qo"/>
@@ -57,7 +57,7 @@
         <!--Principale-->
         <scene sceneID="uuF-FD-PqX">
             <objects>
-                <viewController id="8hY-2K-Iey" customClass="SecondViewController" customModule="PNChartSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8hY-2K-Iey" customClass="SecondViewController" customModule="onSalesiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u4a-El-iRD"/>
                         <viewControllerLayoutGuide type="bottom" id="ECg-W1-8uV"/>
@@ -114,7 +114,7 @@
         <!--Table View Chart Controller-->
         <scene sceneID="4YU-50-H94">
             <objects>
-                <tableViewController id="sPi-mE-mHQ" customClass="tableViewChartController" customModule="PNChartSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="sPi-mE-mHQ" customClass="tableViewChartController" customModule="onSalesiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Wgp-5B-yBA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -157,7 +157,7 @@
         <!--Chart View Controller-->
         <scene sceneID="hlB-0j-cXw">
             <objects>
-                <viewController storyboardIdentifier="Chart" id="fuL-RO-K1Y" customClass="ChartViewController" customModule="PNChartSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Chart" id="fuL-RO-K1Y" customClass="ChartViewController" customModule="onSalesiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1CL-h8-z1B"/>
                         <viewControllerLayoutGuide type="bottom" id="brD-rw-S5n"/>
@@ -187,7 +187,7 @@
         <!--Setting-->
         <scene sceneID="tn3-tx-0ge">
             <objects>
-                <viewController id="8nv-FS-a06" userLabel="Setting" customClass="ThirdViewController" customModule="PNChartSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8nv-FS-a06" userLabel="Setting" customClass="ThirdViewController" customModule="onSalesiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7CJ-vj-MWm"/>
                         <viewControllerLayoutGuide type="bottom" id="zSf-Er-H4c"/>
@@ -373,7 +373,7 @@
         <!--Information View Controller-->
         <scene sceneID="5ly-sq-cGD">
             <objects>
-                <viewController storyboardIdentifier="Information" id="stm-oo-esv" customClass="InformationViewController" customModule="PNChartSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Information" id="stm-oo-esv" customClass="InformationViewController" customModule="onSalesiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bqz-5F-F1D"/>
                         <viewControllerLayoutGuide type="bottom" id="YIi-Kt-yqa"/>
