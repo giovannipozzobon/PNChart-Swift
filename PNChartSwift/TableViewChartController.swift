@@ -30,18 +30,54 @@ class tableViewChartController: UITableViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
         // riempi l'array che poi saranno le righe della tabella
         nameCharts = ["Line Chart", "Bar Chart", "Pie Chart", "Top Order", "Top User", "Dett Order"]
         
         // anche se non usate per ora prepariamo la gestione di più ViewControll chiamati una per una ogni riga della tabella
         vc_StoryBoardID = ["Chart", "Chart", "Chart", "Information", "Information", "Information"]
 
+        // inizializza le variabili flag che indicano il caricamenteo dei dati
+        datiScambiati.graphLoaded = false
+        datiScambiati.topUserLoaded = false
+        datiScambiati.topOrderLoaded = false
     
         // carica gli URL utente
         userDefault.readValueUser()
         
+        // carica i dati per i grafici
+        caricaJSONOrdini()
+        
+        
+        // carica i dati per il TopOrders
+        caricaJSONTopOrders()
+ 
+        // carica i dati per i TopUsers
+        caricaJSONTopUsers()
+        
+        /* codice per uso di test per verificare le risposte dei vari WebServices
+         Alamofire.request(querypoint,  method: .post, parameters: parameters, encoding: JSONEncoding.default).response { response in
+         //Alamofire.request("http://188.125.99.46:61862/QueryPoint/term.getOrdersAmount?qry={"startDate": "20100501","endDate": "20180505"}").response { response in
+         print("Request: \(String(describing: response.request))")
+         print("Response: \(String(describing: response.response))")
+         print("Error: \(String(describing: response.error))")
+         
+         if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+         print("Data: \(utf8Text)")
+         }*/
+  
+    
+    
+    }
+
+    // MARK: -
+    // MARK: caricamento JSON
+    
+    func caricaJSONOrdini() -> Void {
+
         //let querypointGraph : String = String("http://88.36.205.44:61862/QueryPoint/term.getOrdersAmount?qry=")
         //let querypointGraph : String = String("http://192.168.0.230:61862/QueryPoint/term.getOrdersAmount?qry=")
+        
         let querypointGraph = userDefault.urlOrder
         
         print(querypointGraph)
@@ -51,44 +87,6 @@ class tableViewChartController: UITableViewController {
             "endDate": "20170801"
         ]
         
-        //let querypointTopOrder : String = String("http://88.36.205.44:61862/QueryPoint/term.getTopOrder?qry=")
-        //let querypointTopOrder : String = String("http://192.168.0.230:61862/QueryPoint/term.getTopOrder?qry=")
-        
-        let querypointTopOrder = userDefault.urlCustomer
-        print(querypointTopOrder)
-        
-        let parametersTopOrder: Parameters = [
-            "Date": "20170504"
-        ]
-        
-        //let querypointTopUser : String = String("http://88.36.205.44:61862/QueryPoint/term.getTopUser?qry=")
-        //let querypointTopUser : String = String("http://192.168.0.230:61862/QueryPoint/term.getTopUser?qry=")
-        
-        let querypointTopUser = userDefault.urlSales
-        
-        print(querypointTopUser)
-        
-        let parametersTopUser: Parameters = [
-            "startDate": "20100501",
-            "endDate": "20180505"
-        ]
-        
-        datiScambiati.graphLoaded = false
-        datiScambiati.topUserLoaded = false
-        datiScambiati.topOrderLoaded = false
-        
-        
-        /*    Alamofire.request(querypoint,  method: .post, parameters: parameters, encoding: JSONEncoding.default).response { response in
-         //Alamofire.request("http://188.125.99.46:61862/QueryPoint/term.getOrdersAmount?qry={"startDate": "20100501","endDate": "20180505"}").response { response in
-         print("Request: \(String(describing: response.request))")
-         print("Response: \(String(describing: response.response))")
-         print("Error: \(String(describing: response.error))")
-         
-         if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-         print("Data: \(utf8Text)")
-         }*/
-        
-        // carica i dati per i grafici
         Alamofire.request(querypointGraph, method: .post, parameters: parametersGraph, encoding: JSONEncoding.default).responseJSON
             { (responseData) -> Void in
                 
@@ -106,6 +104,19 @@ class tableViewChartController: UITableViewController {
                 }
                 
         }
+    }
+    
+    func caricaJSONTopOrders() -> Void {
+
+        //let querypointTopOrder : String = String("http://88.36.205.44:61862/QueryPoint/term.getTopOrder?qry=")
+        //let querypointTopOrder : String = String("http://192.168.0.230:61862/QueryPoint/term.getTopOrder?qry=")
+        
+        let querypointTopOrder = userDefault.urlCustomer
+        print(querypointTopOrder)
+        
+        let parametersTopOrder: Parameters = [
+            "Date": "20170504"
+        ]
         
         // carica i dati del top order
         Alamofire.request(querypointTopOrder, method: .post, parameters: parametersTopOrder, encoding: JSONEncoding.default).responseJSON
@@ -125,8 +136,22 @@ class tableViewChartController: UITableViewController {
                 }
                 
         }
+
         
+    }
+
+    func caricaJSONTopUsers() -> Void {
+        //let querypointTopUser : String = String("http://88.36.205.44:61862/QueryPoint/term.getTopUser?qry=")
+        //let querypointTopUser : String = String("http://192.168.0.230:61862/QueryPoint/term.getTopUser?qry=")
         
+        let querypointTopUser = userDefault.urlSales
+        
+        print(querypointTopUser)
+        
+        let parametersTopUser: Parameters = [
+            "startDate": "20100501",
+            "endDate": "20180505"
+        ]
         
         // carica i dati del top user
         Alamofire.request(querypointTopUser, method: .post, parameters: parametersTopUser, encoding: JSONEncoding.default).responseJSON
@@ -147,10 +172,10 @@ class tableViewChartController: UITableViewController {
                 
         }
         
-    
-    
     }
     
+    // MARK: -
+    // MARK: Lifecycle Tabella
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
