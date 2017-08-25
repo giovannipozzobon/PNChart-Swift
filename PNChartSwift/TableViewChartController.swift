@@ -166,9 +166,8 @@ class tableViewChartController: UITableViewController {
     }
     
     
-    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        // dar usare in caso di più view
         let vc_Name = vc_StoryBoardID[indexPath.row]
         let viewController = (storyboard?.instantiateViewController(withIdentifier: vc_Name) as! TemplateViewController)
         
@@ -178,9 +177,8 @@ class tableViewChartController: UITableViewController {
 
         
     }
- 
     
-    /* Questa funzione non viene chiamata perchè viene usata quella della ViewTable */
+    /* Questa funzione non viene chiamata perchè viene usata quella della ViewTable
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var  indexPath : IndexPath = self.tableView.indexPathForSelectedRow!
         
@@ -192,7 +190,7 @@ class tableViewChartController: UITableViewController {
         
         
         
-    }
+    } */
  
 
     override func didReceiveMemoryWarning() {
