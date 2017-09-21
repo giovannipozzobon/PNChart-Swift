@@ -183,7 +183,7 @@ displayCountingLabel:(BOOL)displayCountingLabel
         CGPoint gradientEnd   = CGPointMake(0, CGRectGetMaxY(boundingBox));
         
         CGContextDrawLinearGradient(context, gradient, gradientStart, gradientEnd, 0);
-        CGGradientRelease(gradient), gradient = NULL;
+        (void)(CGGradientRelease(gradient)), gradient = NULL;
         CGContextRestoreGState(context);
      }
     //draw text

@@ -28,17 +28,17 @@ class ChartInterfaceController: WKInterfaceController {
     var ColorArray : [UIColor] = []
 
     //Colori definiti con edefine in Object-C ma che non vengono visti da Swift
-    let NKGreen = UIColor(colorLiteralRed: 77.0 / 255.0, green: 186.0 / 255.0, blue: 122.0 / 255.0, alpha: 1.0)
-    let NKLightGrey = UIColor (colorLiteralRed:225.0 / 255.0, green:225.0 / 255.0, blue:225.0 / 255.0, alpha:1.0)
-    let NKTwitterColor = UIColor (colorLiteralRed:0.0 / 255.0, green:171.0 / 255.0, blue:243.0 / 255.0, alpha:1.0)
-    let NKRed = UIColor (colorLiteralRed:245.0 / 255.0, green:94.0 / 255.0, blue:78.0 / 255.0, alpha:1.0)
-    let NKLightGreen = UIColor(colorLiteralRed:77.0 / 255.0, green:216.0 / 255.0, blue:122.0 / 255.0, alpha:1.0)
-    let NKFreshGreen = UIColor(colorLiteralRed:77.0 / 255.0, green:196.0 / 255.0, blue:122.0 / 255.0, alpha:1.0)
-    let NKDeepGreen = UIColor(colorLiteralRed:77.0 / 255.0, green:176.0 / 255.0, blue:122.0 / 255.0, alpha:1.0)
-    let NKBlack     = UIColor(colorLiteralRed:45.0 / 255.0, green:45.0 / 255.0, blue:45.0 / 255.0, alpha:1.0)
-    let NKBlackBlack = UIColor(colorLiteralRed:0.0 / 255.0, green:0.0 / 255.0, blue:0.0 / 255.0, alpha:1.0)
+    let NKGreen = UIColor(red: 77.0 / 255.0, green: 186.0 / 255.0, blue: 122.0 / 255.0, alpha: 1.0)
+    let NKLightGrey = UIColor (red:225.0 / 255.0, green:225.0 / 255.0, blue:225.0 / 255.0, alpha:1.0)
+    let NKTwitterColor = UIColor (red:0.0 / 255.0, green:171.0 / 255.0, blue:243.0 / 255.0, alpha:1.0)
+    let NKRed = UIColor (red:245.0 / 255.0, green:94.0 / 255.0, blue:78.0 / 255.0, alpha:1.0)
+    let NKLightGreen = UIColor(red:77.0 / 255.0, green:216.0 / 255.0, blue:122.0 / 255.0, alpha:1.0)
+    let NKFreshGreen = UIColor(red:77.0 / 255.0, green:196.0 / 255.0, blue:122.0 / 255.0, alpha:1.0)
+    let NKDeepGreen = UIColor(red:77.0 / 255.0, green:176.0 / 255.0, blue:122.0 / 255.0, alpha:1.0)
+    let NKBlack     = UIColor(red:45.0 / 255.0, green:45.0 / 255.0, blue:45.0 / 255.0, alpha:1.0)
+    let NKBlackBlack = UIColor(red:0.0 / 255.0, green:0.0 / 255.0, blue:0.0 / 255.0, alpha:1.0)
     
-    let shadowColor = UIColor(colorLiteralRed:225.0 / 255.0, green:225.0 / 255.0, blue:225.0 / 255.0, alpha:0.5)
+    let shadowColor = UIColor(red:225.0 / 255.0, green:225.0 / 255.0, blue:225.0 / 255.0, alpha:0.5)
     
      
     override func awake(withContext context: Any?) {
