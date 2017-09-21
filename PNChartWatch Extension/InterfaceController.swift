@@ -129,7 +129,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         print(querypointTopOrder)
         
         let parametersTopOrder: Parameters = [
-            "Date": "20170504"
+            "Date": "20170613"
         ]
         
         // carica i dati del top order
